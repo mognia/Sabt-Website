@@ -133,7 +133,7 @@
         font-size: 42px;
         font-weight: 600;
         line-height: 60px;
-        margin-bottom: 25px;
+        margin-bottom: 8px;
       }
       
       .hero-area .contents p {
@@ -183,8 +183,8 @@
       }
       .header-SubTitle{
         color: #fff;
-        padding: 0% 18% 5% 18%;;
-        font-size: 21px;
+        padding: 0% 18% 2% 18%;
+        font-size: 19px;
       }
       /* ==========================================================================
        Hero Production version
@@ -218,15 +218,15 @@
       }
       
       .hero-area-2 .contents {
-        padding: 72px 0 5px 0;
+        padding: 50px 0 5px 0;
         text-align: center;
       }
       
       .hero-area-2 .contents h2 {
         color: #efefef;
-        font-size: 36px;
+        font-size: 32px;
         line-height: 62px;
-        margin-bottom: 25px;
+        margin-bottom: 0;
         font-weight: 600;
       }
       
@@ -257,150 +257,15 @@
         height: auto;
         max-width: 100%;
       }
-      /* uploader */
-   
-   
-   .file-upload {
-    background-color: #ffffffd4;
-    width: 600px;
-    margin: 4px 8px 25px 0;
-    padding: 20px;
-    border-radius: 31px;
-  }
-  
-  .file-upload-btn {
-    width: 100%;
-    margin: 0;
-    color: #fff;
-    background: #3b9dff;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    border-bottom: 4px solid #31dfff;
-    transition: all .2s ease;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  
-  .file-upload-btn:hover {
-    background: #2df7ff;
-    color: #ffffff;
-    transition: all .2s ease;
-    cursor: pointer;
-  }
-  
-  .file-upload-btn:active {
-    border: 0;
-    transition: all .2s ease;
-  }
-  
-  .file-upload-content {
-    display: none;
-    text-align: center;
-  }
-  
-  .file-upload-input {
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    opacity: 0;
-    cursor: pointer;
-    left: 0%;
-  }
-  
-  .image-upload-wrap {
-    margin-top: 20px;
-    border: 4px dashed #37b2ff;
-    position: relative;
-  }
-  
-  .image-dropping,
-  .image-upload-wrap:hover {
-    background-color: #2ef9ff;
-    border: 4px dashed #ffffff;
-  }
-  
-  .image-title-wrap {
-    padding: 0 15px 15px 15px;
-    color: #222;
-  }
-  
-  .drag-text {
-    text-align: center;
-  }
-  
-  .drag-text h3 {
-    font-weight: 100;
-    text-transform: uppercase;
-    color: #3b97ff;
-    padding: 60px 0;
-  }
-  
-  .file-upload-image {
-    max-height: 200px;
-    max-width: 200px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .remove-image {
-    width: 200px;
-    margin: 0;
-    color: #fff;
-    background: #cd4535;
-    border: none;
-    padding: 10px;
-    border-radius: 4px;
-    border-bottom: 4px solid #b02818;
-    transition: all .2s ease;
-    outline: none;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  
-  .remove-image:hover {
-    background: #c13b2a;
-    color: #ffffff;
-    transition: all .2s ease;
-    cursor: pointer;
-  }
-  
-  .remove-image:active {
-    border: 0;
-    transition: all .2s ease;
-  }
-
+    
 //   
 // // /// // tabs /// /// //
 
-@import '../../../@theme/styles/themes';
-@import '~bootstrap/scss/mixins/breakpoints';
-@import '~@nebular/theme/styles/global/breakpoints';
+nb-tabset .tabset{
+  font-size: 20px;
+} 
 
-@include nb-install-component() {
-  nb-tabset {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  nb-tab {
-    padding: nb-theme(padding);
-  }
-
-  /deep/ ngx-tab1, /deep/ ngx-tab2 {
-    display: block;
-    padding: nb-theme(padding);
-  }
-
-  @include media-breakpoint-down(xs) {
-    nb-tabset /deep/ul {
-      font-size: 1rem;
-      padding: 0 0.25rem;
-    }
-  }
+//////// Stepper ////////
+.cardBody{
+  padding: 2% 13% 0;
 }

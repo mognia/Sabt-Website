@@ -39,6 +39,7 @@ import {
   NbTooltipModule,
   NbCalendarKitModule,
 } from '@nebular/theme';
+import { UploaderComponent } from './components/uploader/uploader.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -89,6 +90,7 @@ const HOME_COMPONENTS = [
   ],
   declarations: [
     ...HOME_COMPONENTS,
+    UploaderComponent,
     
   ],
 
