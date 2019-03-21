@@ -27,7 +27,9 @@
 .content{
   height: 200vh;
 }
-
+.nb-theme-corporate nb-layout .layout .layout-container .content .columns nb-layout-column{
+  padding: 0;
+}
 /*
 Theme Name:       Proton - Bootstrap 4 Template
 Author:           UIdeck

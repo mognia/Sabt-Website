@@ -1,35 +1,29 @@
 
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 
 @Component({
-  selector: 'ngx-pages',
+  selector: 'home-page',
   styleUrls: ['home.component.scss'],
   template: `
-    <home-header></home-header>
-    <router-outlet></router-outlet>
+  
+  <home-header fixed></home-header>
+  
+  <nb-layout >
+  <nb-layout-column>
 
+  <router-outlet></router-outlet>
+  </nb-layout-column>
+  </nb-layout>
+ 
   `,
 })
 export class HomeComponent {
-  @ViewChild('stickyMenu') menuElement: ElementRef;
 
   sticky: boolean = false;
   elementPosition: any;
   constructor() {
     document.getElementById('nb-global-spinner').style.display= 'none';
    }
-   ngAfterViewInit(){
-    this.elementPosition = this.menuElement.nativeElement.offsetTop;
-  }
-  @HostListener('window:scroll', ['$event'])
-    handleScroll(){
-      const windowScroll = window.pageYOffset;
-      if(windowScroll >= this.elementPosition){
-        this.sticky = true;
-      } else {
-        this.sticky = false;
-      }
-    }
 }

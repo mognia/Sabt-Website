@@ -1,28 +1,99 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 
 import { HomeComponent } from './home.component';
 
-import { IndexModule } from "./index/index.module";
 import { HomeRoutingModule } from './home-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from "./components/header/header.component";
 
-const PAGES_COMPONENTS = [
-    HomeComponent,
+import {
+  NbActionsModule,
+  NbCardModule,
+  NbLayoutModule,
+  NbMenuModule,
+  NbRouteTabsetModule,
+  NbSearchModule,
+  NbSidebarModule,
+  NbTabsetModule,
+  NbUserModule,
+  NbCheckboxModule,
+  NbPopoverModule,
+  NbContextMenuModule,
+  NbProgressBarModule,
+  NbCalendarModule,
+  NbCalendarRangeModule,
+  NbStepperModule,
+  NbButtonModule,
+  NbInputModule,
+  NbAccordionModule,
+  NbDatepickerModule,
+  NbDialogModule,
+  NbWindowModule,
+  NbListModule,
+  NbToastrModule,
+  NbAlertModule,
+  NbSpinnerModule,
+  NbRadioModule,
+  NbSelectModule,
+  NbChatModule,
+  NbTooltipModule,
+  NbCalendarKitModule,
+} from '@nebular/theme';
+
+const NB_MODULES = [
+  NbCardModule,
+  NbLayoutModule,
+  NbTabsetModule,
+  NbRouteTabsetModule,
+  NbMenuModule,
+  NbUserModule,
+  NbActionsModule,
+  NbSearchModule,
+  NbSidebarModule,
+  NbCheckboxModule,
+  NbPopoverModule,
+  NbContextMenuModule,
+  NbProgressBarModule,
+  NbCalendarModule,
+  NbCalendarRangeModule,
+  NbStepperModule,
+  NbButtonModule,
+  NbListModule,
+  NbToastrModule,
+  NbInputModule,
+  NbAccordionModule,
+  NbDatepickerModule,
+  NbDialogModule,
+  NbWindowModule,
+  NbAlertModule,
+  NbSpinnerModule,
+  NbRadioModule,
+  NbSelectModule,
+  NbChatModule,
+  NbTooltipModule,
+  NbCalendarKitModule,
 ];
+
+const HOME_COMPONENTS = [
+    HomeComponent,
+    HeaderComponent
+];
+
 
 @NgModule({
   imports: [
     HomeRoutingModule,
-    IndexModule,
-    ThemeModule
+    ThemeModule,
+    NbTabsetModule,
+     ...NB_MODULES
   ],
   declarations: [
-    ...PAGES_COMPONENTS,
-    HeaderComponent,
+    ...HOME_COMPONENTS,
+    
   ],
 
 
 })
 export class HomeModule {
+
 }
