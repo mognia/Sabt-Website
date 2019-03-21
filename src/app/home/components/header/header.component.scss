@@ -1,0 +1,370 @@
+ 
+   /* ==========================================================================
+      Navbar Style
+      ========================================================================== */
+      .logo-menu a {
+        font-size: 20px;
+        color: #fff;
+      }
+      
+      .menu-bg {
+        background: -webkit-linear-gradient(left, #3c96ff 0%, #2dfbff 100%) !important;
+        background: linear-gradient(to right, #2dfbff 0%, #3c96ff 100%) !important;
+        box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.1);
+        z-index: 9999;
+        padding: 5px;
+      }
+      
+      .menu-bg .menu-button {
+        top: 0;
+      }
+      
+      .menu-bg .menu-button:hover {
+        cursor: pointer;
+        color: #3c9cfd;
+      }
+      
+      .menu-bg .logo-menu a {
+        color: #3c9cfd;
+      }
+      
+      .menu-bg .navbar-nav .nav-link {
+        color: #ffffff !important;
+      }
+      
+      .menu-bg .navbar-nav .nav-link:hover {
+        color: #ffffff !important;
+      }
+      
+      .menu-bg .navbar-nav .active {
+        color: #ffffff !important;
+      }
+      
+      .navbar-expand-md .navbar-nav .nav-link {
+        color: #fff;
+        font-size: 15px;
+        padding: 5px 0px;
+        margin-left: 30px;
+        font-family: iranSAnsM;
+        position: relative;
+      }
+      
+      .navbar-expand-md .navbar-nav .nav-link:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: #ffffff;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+      }
+      
+      .navbar-expand-md .navbar-nav .active::before,
+      .navbar-expand-md .navbar-nav .nav-link:hover::before {
+        width: 100%;
+      }
+      
+      .navbar-brand {
+        color: #fff;
+      }
+      
+      .navbar-expand-md .navbar-nav .nav-link:focus,
+      .navbar-expand-md .navbar-nav .nav-link:hover,
+      .navbar-expand-md .navbar-nav .nav-link:hover:before {
+        color: #ffffff;
+      }
+      
+      .navbar-expand-md .navbar-nav .active > .nav-link,
+      .navbar-expand-md .navbar-nav .nav-link.active,
+      .navbar-expand-md .navbar-nav .nav-link.active:before,
+      .navbar-expand-md .navbar-nav .nav-link.open,
+      .navbar-expand-md .navbar-nav .open > .nav-link {
+        color: #ffffff;
+      }
+      
+      .navbar-expand-md .navbar-toggler {
+        background: transparent;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        margin: 5px;
+        cursor: pointer;
+        float: right;
+      }
+      
+      .navbar-expand-md .navbar-toggler i {
+        color: #fff !important;
+      }
+      
+      .navbar-expand-md .navbar-toggler:focus {
+        outline: none;
+      }
+      
+      /* ==========================================================================
+         Hero Area
+         ========================================================================== */
+      .hero-area {
+        background: #3c96ff;
+        background-size: cover;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .hero-area .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image: -moz-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%);
+        background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+        background-image: -ms-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%);
+      }
+      
+      .hero-area .contents {
+        padding: 160px 0 140px;
+      }
+      
+      .hero-area .contents h2 {
+        color: #fff;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 60px;
+        margin-bottom: 25px;
+      }
+      
+      .hero-area .contents p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      
+      .hero-area .contents .btn {
+        margin-top: 40px;
+        margin-right: 20px;
+        text-transform: uppercase;
+      }
+      
+      .hero-area .contents .btn-border {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+      
+      .hero-area .intro-img {
+        padding: 148px 0 0px;
+      }
+      
+      .hero-area .intro-img img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      .headerTxt{
+        text-align: right;
+        font-size: 33px;
+        margin: -10px 14% 2% 0;
+      }
+      .headerTxt p{
+        display: inline-block;
+        color: #fff;
+        font-family: iranSansM;
+        font-size: 23px;
+      }
+      .headerTxt .fa{
+        color: #3bffc0d6;
+        margin-left: 12px;
+      }
+      
+      .header-container{
+        padding: 2% 0 0 0;
+      }
+      /* ==========================================================================
+       Hero Production version
+       ========================================================================== */
+      .hero-area-2 {
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .container-bg{
+        position: absolute;
+        width: 172%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image: url("./../../../../assets/img/intro-mobile.png");
+        background-size: 8%;
+        opacity: 0.3;
+      }
+      
+      .hero-area-2 .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+
+        background-image: -webkit-linear-gradient(0deg, #2d81ff 0%, #3c96ff 100%);
+
+      }
+      
+      .hero-area-2 .contents {
+        padding: 72px 0 5px 0;
+        text-align: center;
+      }
+      
+      .hero-area-2 .contents h2 {
+        color: #efefef;
+        font-size: 36px;
+        line-height: 62px;
+        margin-bottom: 25px;
+        font-weight: 600;
+      }
+      
+      .hero-area-2 .contents p {
+        color: #373bb1c7;
+        font-size: 25px;
+        line-height: 48px;
+      }
+      
+      .hero-area-2 .contents .btn {
+        margin-top: 40px;
+        margin-right: 20px;
+        text-transform: uppercase;
+      }
+      
+      .hero-area-2 .contents .btn-border {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+      
+      .hero-area-2 .intro-img {
+        padding: 180px 0 0px;
+        max-height: 700px;
+      }
+      
+      .hero-area-2 .intro-img img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      /* uploader */
+   
+   
+   .file-upload {
+    background-color: #ffffffd4;
+    width: 600px;
+    margin: 4px 8px 25px 0;
+    padding: 20px;
+    border-radius: 31px;
+  }
+  
+  .file-upload-btn {
+    width: 100%;
+    margin: 0;
+    color: #fff;
+    background: #3b9dff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #31dfff;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .file-upload-btn:hover {
+    background: #2df7ff;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    left: 0%;
+  }
+  
+  .image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #37b2ff;
+    position: relative;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: #2ef9ff;
+    border: 4px dashed #ffffff;
+  }
+  
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #3b97ff;
+    padding: 60px 0;
+  }
+  
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }

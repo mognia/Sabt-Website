@@ -38,7 +38,14 @@
               "node_modules/angular-tree-component/dist/angular-tree-component.css",
               "node_modules/pace-js/templates/pace-theme-flash.tmpl.css",
               "node_modules/leaflet/dist/leaflet.css",
-              "src/app/@theme/styles/styles.scss"
+              "src/app/@theme/styles/styles.scss",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/owl.theme.default.min.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/magnific-popup.css",
+              "src/assets/css/nivo-lightbox.css",
+              "src/assets/css/responsive.css"
             ],
             "scripts": [
               "node_modules/pace-js/pace.min.js",
@@ -49,7 +56,23 @@
               "node_modules/tinymce/plugins/table/plugin.min.js",
               "node_modules/echarts/dist/echarts.min.js",
               "node_modules/echarts/dist/extension/bmap.min.js",
-              "node_modules/chart.js/dist/Chart.min.js"
+              "node_modules/chart.js/dist/Chart.min.js",
+              "src/assets/js/jquery-min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/jquery.mixitup.js",
+              "src/assets/js/jquery.nav.js",
+              "src/assets/js/scrolling-nav.js",
+              "src/assets/js/jquery.easing.min.js",
+              "src/assets/js/wow.js",
+              "src/assets/js/jquery.counterup.min.js",
+              "src/assets/js/nivo-lightbox.js",
+              "src/assets/js/jquery.magnific-popup.min.js",
+              "src/assets/js/waypoints.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/step.js",
+              "src/assets/js/uploader.js"
             ]
           },
           "configurations": {
