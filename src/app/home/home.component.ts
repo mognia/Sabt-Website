@@ -46,6 +46,7 @@ export class HomeComponent {
   sticky: boolean = false;
   elementPosition: any;
   constructor() {
+    document.getElementById('nb-global-spinner').style.display= 'none';
    }
    ngAfterViewInit(){
     this.elementPosition = this.menuElement.nativeElement.offsetTop;
