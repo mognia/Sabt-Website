@@ -1,88 +1,107 @@
+<!-- Header Section Start -->
+<header id="home" class="hero-area-2">
+  <div class="overlay"></div>
+  <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+    <div class="container">
 
-  <!-- Header Section Start -->
-  <header id="home" class="hero-area-2">
-    <div class="overlay"></div>
-    <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
-      <div class="container">
-        <a href="index.html" class="navbar-brand"><img src="../../../../assets/img/logo.png" alt=""></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
-          aria-expanded="false" aria-label="Toggle navigation">
-          <i class="lni-menu"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav mr-auto w-100 justify-content-end">
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#home">خانه</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#app-features">مزایا</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#screenshots">مراحل</a>
-            </li>
 
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="#download">اپلیکیشن</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link page-scroll" href="/#/login">ورود</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <div class="container ">
-      <div class="container-bg"> </div>
-      <div class="row ">
-        <div class="col-lg-12 col-md-12 col-xs-12">
-          <div class="contents">
-            <h2 class="head-title">اثبات وجود مدارک بر پایه بلاک چین</h2>
-            <div class="header-SubTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <nb-card>
-            <nb-card-body>
-          
-              <nb-tabset fullWidth>
-                <nb-tab id="tabTitle" tabTitle="ثبت جدید">
-                    <nb-card>
-                        <nb-card-body class="cardBody">
-                          <nb-stepper orientation="horizontal">
-                            <nb-step [label]="labelOne">
-                              <ng-template #labelOne>ثبت محتوا</ng-template>
-                              <file-uploader></file-uploader>
-                              <button nbButton disabled nbStepperNext>قبلی</button>
-                              <button nbButton nbStepperNext>بعدی</button>
-                            </nb-step>
-                            <nb-step [label]="labelTwo">
-                              <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
-                              <h3>Step content #2</h3>
-                              <button nbButton nbStepperPrevious>قبلی</button>
-                              <button nbButton nbStepperNext>بعدی</button>
-                            </nb-step>
-                            <nb-step label="تایید">
-                              <h3>Step content #3</h3>
-                              <button nbButton nbStepperPrevious>قبلی</button>
-                              <button nbButton disabled nbStepperNext>بعدی</button>
-                            </nb-step>
-                          </nb-stepper>
-                        </nb-card-body>
-                      </nb-card>
-                </nb-tab>
-                <nb-tab tabTitle="استعلام">
-                  <p> <strong>استعلام</strong></p>
-                </nb-tab>
-              </nb-tabset>
-          
-            </nb-card-body>
-          </nb-card>
-        </div>
+      <a href="index.html" class="navbar-brand">
+        <img src="../../../../assets/img/logo.png" alt="">
+      </a>
 
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="lni-menu"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav hyperLinks mr-auto w-100 justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#home">خانه</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#app-features">مزایا</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#screenshots">مراحل</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#download">اپلیکیشن</a>
+          </li>
+
+        </ul>
+        <ul class="navbar-nav mr-auto w-100 justify-content-end">
+
+          <li class="nav-item">
+              <button nbButton outline status="success" class="btn">
+                ورود / عضویت
+              </button>
+          </li>
+
+          <li class="nav-item">
+              <button nbButton hero status="primary" class="btn" >ثبت جدید</button>
+          </li>
+
+        </ul>
       </div>
 
     </div>
-  </header>
-  <!-- Header Section End -->
+  </nav>
+  <div class="container ">
+    <div class="container-bg"> </div>
+    <div class="row ">
+      <div class="col-lg-12 col-md-12 col-xs-12">
+        <div class="contents">
+          <h2 class="head-title">اثبات وجود مدارک بر پایه بلاک چین</h2>
+          <div class="header-SubTitle">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
+            گرافیک است. </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <nb-card>
+          <nb-card-body>
+
+            <nb-tabset fullWidth>
+              <nb-tab id="tabTitle" tabTitle="ثبت جدید">
+                <nb-card>
+                  <nb-card-body class="cardBody">
+                    <nb-stepper orientation="horizontal">
+                      <nb-step [label]="labelOne">
+                        <ng-template #labelOne>ثبت محتوا</ng-template>
+                        <file-uploader></file-uploader>
+                        <button nbButton disabled nbStepperNext>قبلی</button>
+                        <button nbButton nbStepperNext>بعدی</button>
+                      </nb-step>
+                      <nb-step [label]="labelTwo">
+                        <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
+                        <h3>Step content #2</h3>
+                        <button nbButton nbStepperPrevious>قبلی</button>
+                        <button nbButton nbStepperNext>بعدی</button>
+                      </nb-step>
+                      <nb-step label="تایید">
+                        <h3>Step content #3</h3>
+                        <button nbButton nbStepperPrevious>قبلی</button>
+                        <button nbButton disabled nbStepperNext>بعدی</button>
+                      </nb-step>
+                    </nb-stepper>
+                  </nb-card-body>
+                </nb-card>
+              </nb-tab>
+              <nb-tab tabTitle="استعلام">
+                <p> <strong>استعلام</strong></p>
+              </nb-tab>
+            </nb-tabset>
+
+          </nb-card-body>
+        </nb-card>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+<!-- Header Section End -->

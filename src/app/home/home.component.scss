@@ -16,6 +16,14 @@
     }
   }
 }
+
+@font-face {
+  font-family: iranSansM;
+  src: url(../../assets/fonts/iransansMedium.woff2) format("opentype");
+}
+#home{
+  font-family: iranSansM;
+}
 .sticky{
   position: fixed;
   top: 0;

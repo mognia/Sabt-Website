@@ -1,4 +1,6 @@
  
+
+
    /* ==========================================================================
       Navbar Style
       ========================================================================== */
@@ -45,7 +47,7 @@
         font-size: 15px;
         padding: 5px 0px;
         margin-left: 30px;
-        font-family: iranSAnsM;
+        font-family: iranSansM;
         position: relative;
       }
       
@@ -182,9 +184,10 @@
         padding: 2% 0 0 0;
       }
       .header-SubTitle{
+        font-family: iranSansM;
         color: #fff;
-        padding: 0% 18% 2% 18%;
-        font-size: 19px;
+        padding: 0% 0% 2% 0%;
+        font-size: 16px;
       }
       /* ==========================================================================
        Hero Production version
@@ -219,14 +222,15 @@
       
       .hero-area-2 .contents {
         padding: 50px 0 5px 0;
-        text-align: center;
+        text-align: right;
       }
       
       .hero-area-2 .contents h2 {
+        font-family: iranSansM;
         color: #efefef;
-        font-size: 32px;
+        font-size: 26px;
         line-height: 62px;
-        margin-bottom: 0;
+        margin-top: 14px;
         font-weight: 600;
       }
       
@@ -257,15 +261,38 @@
         height: auto;
         max-width: 100%;
       }
-    
+      .btn{
+        font-family: iransansm;
+        margin: 0 5%;
+      }
+      .nav-item{
+        margin: 0 2%;
+      }
+    .hyperLinks{
+      padding-right: 31%!important;
+    }
 //   
 // // /// // tabs /// /// //
 
 nb-tabset .tabset{
+  font-family: iranSansM;
   font-size: 20px;
 } 
 
+ul{
+  font-family: iranSansM;
+}
+
+ nb-tabset .tabset a {
+  font-family: iranSansM;
+  padding: 9px 0;
+  color: #505050;
+  font-size: 19px;
+  font-weight: 800;
+}
+
 //////// Stepper ////////
 .cardBody{
+  font-family: iranSansM;
   padding: 2% 13% 0;
 }
