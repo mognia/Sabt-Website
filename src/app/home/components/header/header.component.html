@@ -62,42 +62,7 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <nb-card>
-          <nb-card-body>
-
-            <nb-tabset fullWidth>
-              <nb-tab id="tabTitle" tabTitle="ثبت جدید">
-                <nb-card>
-                  <nb-card-body class="cardBody">
-                    <nb-stepper orientation="horizontal">
-                      <nb-step [label]="labelOne">
-                        <ng-template #labelOne>ثبت محتوا</ng-template>
-                        <file-uploader></file-uploader>
-                        <button nbButton disabled nbStepperNext>قبلی</button>
-                        <button nbButton nbStepperNext>بعدی</button>
-                      </nb-step>
-                      <nb-step [label]="labelTwo">
-                        <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
-                        <h3>Step content #2</h3>
-                        <button nbButton nbStepperPrevious>قبلی</button>
-                        <button nbButton nbStepperNext>بعدی</button>
-                      </nb-step>
-                      <nb-step label="تایید">
-                        <h3>Step content #3</h3>
-                        <button nbButton nbStepperPrevious>قبلی</button>
-                        <button nbButton disabled nbStepperNext>بعدی</button>
-                      </nb-step>
-                    </nb-stepper>
-                  </nb-card-body>
-                </nb-card>
-              </nb-tab>
-              <nb-tab tabTitle="استعلام">
-                <p> <strong>استعلام</strong></p>
-              </nb-tab>
-            </nb-tabset>
-
-          </nb-card-body>
-        </nb-card>
+        <new-record></new-record>
       </div>
 
     </div>

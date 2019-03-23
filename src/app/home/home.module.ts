@@ -40,6 +40,7 @@ import {
   NbCalendarKitModule,
 } from '@nebular/theme';
 import { UploaderComponent } from './components/uploader/uploader.component';
+import { NewRecordComponent } from './components/new-record/new-record.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -91,6 +92,7 @@ const HOME_COMPONENTS = [
   declarations: [
     ...HOME_COMPONENTS,
     UploaderComponent,
+    NewRecordComponent,
     
   ],
 
