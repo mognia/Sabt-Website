@@ -1,17 +1,20 @@
+<form [formGroup]="uploaderForm" (ngSubmit)="onSubmit()">
 <div class="file-upload float-right">
     <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">انتخاب فایل</button>
 
     <div class="image-upload-wrap">
-      <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+      <input formControlName="file" class="file-upload-input" type='file' (change)='validate($event)' onchange="readURL(this);" accept="image/*" />
       <div class="drag-text">
         <h3>فایل خود را اینجا رها کنید</h3>
+        <span *ngIf="uploaderForm.get('file').hasError('fileNotFound')">not file</span>
       </div>
     </div>
     <div class="file-upload-content">
       <img class="file-upload-image" src="#" alt="your image" />
       <div class="image-title-wrap">
-        <button type="button" onclick="removeUpload()" class="remove-image">حدف <span class="image-title">Uploaded
+        <button type="button" onclick="removeUpload()" class="remove-image">حذف <span class="image-title">Uploaded
             Image</span></button>
       </div>
     </div>
   </div>
+</form>

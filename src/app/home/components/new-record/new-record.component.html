@@ -6,11 +6,13 @@
         <nb-card>
           <nb-card-body class="cardBody">
             <nb-stepper orientation="horizontal">
-              <nb-step [label]="labelOne">
+              <nb-step [label]="labelOne" class="steps">
                 <ng-template #labelOne>ثبت محتوا</ng-template>
-                <file-uploader></file-uploader>
+                
+                <file-uploader ></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>قبلی</button>
-                <button class="fontFamily" nbButton nbStepperNext>بعدی</button>
+                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">بعدی</button>
+                <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">بعدی</button>
               </nb-step>
               <nb-step [label]="labelTwo">
                 <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
