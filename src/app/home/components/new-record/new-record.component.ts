@@ -1,12 +1,12 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 import { FileInputService } from "../../../services/file-input.service";
 import { UploaderComponent } from "./../uploader/uploader.component";
-import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, FormControl } from "@angular/forms";
 
 @Component({
-  selector: 'new-record',
-  templateUrl: './new-record.component.html',
-  styleUrls: ['./new-record.component.scss']
+  selector: "new-record",
+  templateUrl: "./new-record.component.html",
+  styleUrls: ["./new-record.component.scss"]
 })
 export class NewRecordComponent implements OnInit {
   hasFile = false;
@@ -15,34 +15,29 @@ export class NewRecordComponent implements OnInit {
   linearMode = true;
   firstForm: FormGroup;
 
+  inputFile = { files: { length: 0 } };
   @Input() uploader: UploaderComponent;
   constructor(
     private fileInputService: FileInputService,
     private fb: FormBuilder
   ) {
     this.firstForm = this.fb.group({
-      firstCtrl: ['', this.stepValidator],
+      firstCtrl: ["", stepValidator]
     });
 
-
-    this._subscription = fileInputService.fileChange.subscribe((value) => {
+    this._subscription = fileInputService.fileChange.subscribe(value => {
       this.hasFile = value;
       this.isValid = value;
     });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+}
 
-
-  stepValidator() {
-
-
-  //  if (!this.isValid) {
-  //    return { fileNotFound: true };
-  //  }
-  //  else{
-  //    return null
-  //  }
+export function stepValidator(control: FormControl) {
+  if (control.value == 1) {
+    return null;
+  } else {
+    return { fileNotFound: true };
   }
 }
