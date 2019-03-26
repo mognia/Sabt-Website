@@ -3,7 +3,7 @@
     <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">انتخاب فایل</button>
  
     <div class="image-upload-wrap">
-      <input formControlName="file" #fileInput class="file-upload-input" type='file' (change)='fileInputChange.emit(fileInput)' onchange="readURL(this);" accept="image/*" />
+      <input formControlName="file" #fileInput class="file-upload-input" type='file' (change)='fileInputChange.emit(fileInput) ; sendToValidation($event)' onchange="readURL(this);" accept="image/*" />
       <div class="drag-text">
         <h3>فایل خود را اینجا رها کنید</h3>
         <span *ngIf="uploaderForm.get('file').hasError('fileNotFound')">not file</span>

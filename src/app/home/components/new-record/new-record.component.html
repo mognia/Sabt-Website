@@ -18,7 +18,8 @@
 
                 <file-uploader
                   (fileInputChange)="
-                    firstForm.setValue({ firstCtrl: $event?.files?.length })
+                    firstForm.setValue({ firstCtrl: $event?.files?.length }) ;
+                    stepCtrlBtn($event)
                   "
                 ></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>

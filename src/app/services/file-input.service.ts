@@ -11,7 +11,7 @@ export class FileInputService {
 
    isValid = true;
   validate(file){
-    // console.log(file);
+     console.log(file);
     if (this.isValid) {
       this.file = true;
       this.fileChange.next(this.file)

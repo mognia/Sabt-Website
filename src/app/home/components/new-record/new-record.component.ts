@@ -26,18 +26,30 @@ export class NewRecordComponent implements OnInit {
     });
 
     this._subscription = fileInputService.fileChange.subscribe(value => {
+      console.log(value);
+      
       this.hasFile = value;
       this.isValid = value;
     });
+
+    
   }
 
+  stepCtrlBtn(e){
+   
+   
+  }
   ngOnInit() {}
 }
 
 export function stepValidator(control: FormControl) {
   if (control.value == 1) {
+
     return null;
   } else {
     return { fileNotFound: true };
   }
+}
+function stepCtrlBtn() {
+  
 }
