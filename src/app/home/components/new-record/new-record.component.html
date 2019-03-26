@@ -8,44 +8,31 @@
               <nb-step [label]="labelOne" [stepControl]="firstForm">
                 <ng-template #labelOne>ثبت محتوا</ng-template>
                 <form [formGroup]="firstForm">
-                  <input
-                    type="text"
-                    style="display:none"
-                    class="form-control"
-                    formControlName="firstCtrl"
-                  />
+                  <input type="text" style="display:none" class="form-control" formControlName="firstCtrl" />
                 </form>
 
-                <file-uploader
-                  (fileInputChange)="
+                <file-uploader (fileInputChange)="
                     firstForm.setValue({ firstCtrl: $event?.files?.length }) ;
                     stepCtrlBtn($event)
-                  "
-                ></file-uploader>
+                  "></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
-                <button
-                  *ngIf="hasFile"
-                  class="fontFamily"
-                  nbButton
-                  nbStepperNext
-                  type="submit"
-                >
+                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
                   بعدی
                 </button>
-                <button
-                  *ngIf="!hasFile"
-                  class="fontFamily"
-                  nbButton
-                  nbPopover="ابتدا یک فایل انتخاب کنید"
-                >
+                <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
                   بعدی
                 </button>
               </nb-step>
               <nb-step [label]="labelTwo">
                 <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
-                <h3>Step content #2</h3>
+                <nb-card>
+                  <nb-card-body>
+                    <optional-info>
+                    </optional-info>
+                  </nb-card-body>
+                </nb-card>
                 <button class="fontFamily" nbButton nbStepperPrevious>
                   قبلی
                 </button>

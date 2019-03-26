@@ -22,7 +22,7 @@ export class NewRecordComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.firstForm = this.fb.group({
-      firstCtrl: ["", stepValidator]
+      firstCtrl: ["",] // stepValidator
     });
 
     this._subscription = fileInputService.fileChange.subscribe(value => {
