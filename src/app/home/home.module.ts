@@ -44,6 +44,7 @@ import { NewRecordComponent } from './components/new-record/new-record.component
 import { OptionalInfoComponent } from './components/optional-info/optional-info.component';
 import { FeaturesComponent } from './sections/features/features.component';
 import { DocsSectionComponent } from './sections/docs-section/docs-section.component';
+import { NewsFeedSectionComponent } from './sections/news-feed-section/news-feed-section.component';
 
 
 const NB_MODULES = [
@@ -100,6 +101,7 @@ const HOME_COMPONENTS = [
     OptionalInfoComponent,
     FeaturesComponent,
     DocsSectionComponent,
+    NewsFeedSectionComponent,
     
   ],
 

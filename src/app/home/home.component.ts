@@ -14,6 +14,7 @@ import { Component } from '@angular/core';
   <home-header fixed ></home-header>
   <home-features ></home-features>
   <docs-section></docs-section>
+  <news-feed-section></news-feed-section>
   `,
 })
 export class HomeComponent {
