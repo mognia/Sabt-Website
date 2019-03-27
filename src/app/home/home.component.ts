@@ -9,9 +9,11 @@ import { Component } from '@angular/core';
   template: `
   <nb-layout style="display:none;" >
   </nb-layout>
+
   
-  <home-header fixed></home-header>
-  <home-features></home-features>
+  <home-header fixed ></home-header>
+  <home-features ></home-features>
+  <docs-section></docs-section>
   `,
 })
 export class HomeComponent {
