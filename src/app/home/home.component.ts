@@ -15,6 +15,7 @@ import { Component } from '@angular/core';
   <home-features ></home-features>
   <docs-section></docs-section>
   <news-feed-section></news-feed-section>
+  <download-section></download-section>
   `,
 })
 export class HomeComponent {
