@@ -42,6 +42,7 @@ import {
 import { UploaderComponent } from './components/uploader/uploader.component';
 import { NewRecordComponent } from './components/new-record/new-record.component';
 import { OptionalInfoComponent } from './components/optional-info/optional-info.component';
+import { FeaturesComponent } from './sections/features/features.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -95,6 +96,7 @@ const HOME_COMPONENTS = [
     UploaderComponent,
     NewRecordComponent,
     OptionalInfoComponent,
+    FeaturesComponent,
     
   ],
 

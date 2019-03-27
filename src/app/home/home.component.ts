@@ -7,16 +7,11 @@ import { Component } from '@angular/core';
   selector: 'home-page',
   styleUrls: ['home.component.scss'],
   template: `
+  <nb-layout style="display:none;" >
+  </nb-layout>
   
   <home-header fixed></home-header>
-  
-  <nb-layout >
-  <nb-layout-column>
-
-  <router-outlet></router-outlet>
-  </nb-layout-column>
-  </nb-layout>
- 
+  <home-features></home-features>
   `,
 })
 export class HomeComponent {

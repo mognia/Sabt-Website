@@ -5,7 +5,7 @@
     <div class="image-upload-wrap">
       <input formControlName="file" #fileInput class="file-upload-input" type='file' (change)='fileInputChange.emit(fileInput) ; sendToValidation($event)' onchange="readURL(this);" accept="image/*" />
       <div class="drag-text">
-        <h3>فایل خود را اینجا رها کنید</h3>
+        <h3>فایل خود را اینجا قرار دهید</h3>
         <span *ngIf="uploaderForm.get('file').hasError('fileNotFound')">not file</span>
       </div>
     </div>
