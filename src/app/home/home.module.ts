@@ -46,6 +46,7 @@ import { FeaturesComponent } from './sections/features/features.component';
 import { DocsSectionComponent } from './sections/docs-section/docs-section.component';
 import { NewsFeedSectionComponent } from './sections/news-feed-section/news-feed-section.component';
 import { DownloadSectionComponent } from './sections/download-section/download-section.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 const NB_MODULES = [
@@ -104,6 +105,7 @@ const HOME_COMPONENTS = [
     DocsSectionComponent,
     NewsFeedSectionComponent,
     DownloadSectionComponent,
+    FooterComponent,
     
   ],
 
