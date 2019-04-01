@@ -7,3 +7,9 @@
     font-family: iranSansM;
     src: url(./../fonts/iransansMedium.woff2) format("opentype");
   }
+
+  .cdk-global-scrollblock {
+    position: initial;
+    width: initial;
+    overflow: hidden;
+  }

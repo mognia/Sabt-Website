@@ -15,6 +15,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NbThemeModule, NbLayoutDirection } from '@nebular/theme';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -24,7 +25,7 @@ import { NbThemeModule, NbLayoutDirection } from '@nebular/theme';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-
+    MatDialogModule,
     NbThemeModule.forRoot({ name: 'corporate' }, null, null, NbLayoutDirection.RTL),
     NgbModule.forRoot(),
     ThemeModule.forRoot(),

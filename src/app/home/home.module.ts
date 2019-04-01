@@ -48,7 +48,7 @@ import { NewsFeedSectionComponent } from './sections/news-feed-section/news-feed
 import { DownloadSectionComponent } from './sections/download-section/download-section.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 const NB_MODULES = [
   NbCardModule,
@@ -86,19 +86,7 @@ const NB_MODULES = [
 
 const HOME_COMPONENTS = [
     HomeComponent,
-    HeaderComponent
-];
-
-
-@NgModule({
-  imports: [
-    HomeRoutingModule,
-    ThemeModule,
-    NbTabsetModule,
-     ...NB_MODULES
-  ],
-  declarations: [
-    ...HOME_COMPONENTS,
+    HeaderComponent,
     UploaderComponent,
     NewRecordComponent,
     OptionalInfoComponent,
@@ -108,10 +96,24 @@ const HOME_COMPONENTS = [
     DownloadSectionComponent,
     FooterComponent,
     LoginComponent,
-    
+];
+
+
+@NgModule({
+  imports: [
+    HomeRoutingModule,
+    MatDialogModule,
+    ThemeModule,
+    NbTabsetModule,
+     ...NB_MODULES
   ],
-
-
+  declarations: [
+    ...HOME_COMPONENTS,
+  ],
+  entryComponents:[
+    LoginComponent,
+    HeaderComponent
+  ]
 })
 export class HomeModule {
 
