@@ -13,13 +13,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-  openLoginDialog() {
 
-    this.open();
-  }
-  open(): void {
+  openLoginDialog(): void {
 
-    this.dialog.open(LoginComponent,{disableClose: true});
+    this.dialog.open(LoginComponent,{disableClose: true , width:'50%' , height:'80%'});
 
   }
 }

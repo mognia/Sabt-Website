@@ -49,6 +49,8 @@ import { DownloadSectionComponent } from './sections/download-section/download-s
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
+import { BsDropdownModule } from 'ngx-bootstrap';
 
 const NB_MODULES = [
   NbCardModule,
@@ -101,6 +103,8 @@ const HOME_COMPONENTS = [
 
 @NgModule({
   imports: [
+    BsDropdownModule.forRoot(),
+    NgxIntlTelInputModule,
     HomeRoutingModule,
     MatDialogModule,
     ThemeModule,
