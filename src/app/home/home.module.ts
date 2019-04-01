@@ -47,6 +47,7 @@ import { DocsSectionComponent } from './sections/docs-section/docs-section.compo
 import { NewsFeedSectionComponent } from './sections/news-feed-section/news-feed-section.component';
 import { DownloadSectionComponent } from './sections/download-section/download-section.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './components/login/login.component';
 
 
 const NB_MODULES = [
@@ -106,6 +107,7 @@ const HOME_COMPONENTS = [
     NewsFeedSectionComponent,
     DownloadSectionComponent,
     FooterComponent,
+    LoginComponent,
     
   ],
 
