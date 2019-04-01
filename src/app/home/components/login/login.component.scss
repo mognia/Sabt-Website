@@ -5,6 +5,12 @@
 p{
     font-family: iranSansM;
 }
+.loginBody{
+    font-family: iranSansM;
+}
+.alert{
+    font-family: iranSansM;
+}
 .title{
     text-align: center;
     margin: 12px 0;
@@ -15,4 +21,12 @@ p{
 }
 .phoneNum{
     direction: ltr;
+    display: block;
+}
+.phoneSection{
+        text-align: center;
+        padding: 1% 0 27% 0;
+}
+.phoneSubmitBtn{
+    padding: 26px 0;
 }

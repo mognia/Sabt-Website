@@ -11,10 +11,20 @@
         </div>
       </div>
       <div class="row">
-        <form #f="ngForm" [formGroup]="phoneForm">
-          <ngx-intl-tel-input class="phoneNum" [cssClass]="'custom'" [preferredCountries]="['ir', 'us']" [enablePlaceholder]="true"
-            [enableAutoCountrySelect]="true" name="phone" formControlName="phone"></ngx-intl-tel-input>
-        </form>
+        <div class="col phoneSection">
+
+          <form #f="ngForm" [formGroup]="phoneForm">
+            <ngx-intl-tel-input class="phoneNum mx-auto" [cssClass]="'custom'" [preferredCountries]="['ir', 'us']"
+              [enablePlaceholder]="true" [enableAutoCountrySelect]="true" name="phone" formControlName="phone">
+            </ngx-intl-tel-input>
+            <div *ngIf="invalidNum">
+              <nb-alert status="danger" class="alert">شماره وارد شده صحیح نمیباشد! دوباره چک کنید</nb-alert>
+            </div>
+            <div class="col phoneSubmitBtn">
+              <button nbButton hero status="warning" (click)="validateNum()">ارسال رمز</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </mat-dialog-content>
