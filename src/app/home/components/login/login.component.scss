@@ -5,6 +5,10 @@
 p {
   font-family: iranSansM;
 }
+.mat-dialog-title {
+    margin: 0px 15px 20px;
+    display: inline-block;
+}
 .loginBody {
   font-family: iranSansM;
   transition: 0.5s ease-in-out all;
@@ -26,12 +30,20 @@ p {
 }
 .phoneSection {
   text-align: center;
-  padding: 1% 0 14% 0;
+//   padding: 1% 0 14% 0;
 }
 .phoneSubmitBtn {
   padding: 26px 0;
 }
-
+.header .fa-window-close{
+    font-size: 23px;
+    color: #fff;
+    /* width: 5%; */
+    cursor: pointer;
+}
+.closeBtn{
+    padding: 5px 8px !important;
+}
 
 .codeInput{
     font-family: iranSansM;
@@ -43,4 +55,8 @@ p {
 button{
 
     font-family: iranSansM;
+}
+ nb-alert {
+
+    margin: 1.5rem 0 0
 }
