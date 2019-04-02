@@ -26,22 +26,12 @@ p {
 }
 .phoneSection {
   text-align: center;
-  padding: 1% 0 27% 0;
-}
-.sentCodeStep{
-    opacity: 0 !important;
-    transition: 0.5s ease-in-out all;
+  padding: 1% 0 14% 0;
 }
 .phoneSubmitBtn {
   padding: 26px 0;
 }
-.show {
-  opacity: 1 !important;
-}
-.hide {
-  opacity: 0 !important;
-  display: none;
-}
+
 
 .codeInput{
     font-family: iranSansM;

@@ -11,8 +11,15 @@ export class LoginComponent implements OnInit {
 	phoneForm = new FormGroup({
 		phone: new FormControl(undefined, [Validators.required])
   });
+  codeForm = new FormGroup({
+		code: new FormControl(undefined, [Validators.required])
+  });
+  mailForm = new FormGroup({
+		email: new FormControl()
+  });
   invalidNum;
   codeSent=false;
+  codeSubmited=false;
   constructor(
     public dialogRef: MatDialogRef<LoginComponent>,
   ) { }
@@ -31,5 +38,13 @@ export class LoginComponent implements OnInit {
      console.log('valid num');
      
    }
+  }
+  submiteCode(){
+    if (this.codeForm.valid) {
+      this.codeSubmited = true;
+    }
+    else{
+
+    }
   }
 }

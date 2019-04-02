@@ -1,4 +1,4 @@
-<div class="loginBody " [class.hide]="codeSent" >
+<div class="loginBody " *ngIf="!codeSent">
   <h2 mat-dialog-title>ورود / عضویت</h2>
   <mat-dialog-content class="mat-typography">
     <div class="">
@@ -32,33 +32,64 @@
     <button nbButton size="xsmall" mat-dialog-close>بستن</button>
   </mat-dialog-actions>
 </div>
-<div class="sentCodeStep" [class.show]="codeSent">
-    <h2 mat-dialog-title>تایید شماره موبایل</h2>
-    <mat-dialog-content class="mat-typography">
-      <div class="">
-        <div class="row">
-          <div class="col">
-            <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
-            <p class="title"> وارد کردن کد یکبار مصرف
-            </p>
-            <p class="subTitle">لطفا کد رمزی که به شماره شما ارسال شده را وارد نمایید</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col phoneSection">
-  
-            <form #f="ngForm" [formGroup]="phoneForm">
-                <input class="codeInput" type="text" nbInput  status="success" placeholder="کد 6 رقمی ارسال شده را وارد کنید">
-              <div class="col ">
-                  <button nbButton hero class="codeSubmitBtn" status="danger" (click)="validateNum()">ارسال مجدد کد</button>
-                <button nbButton hero  class="codeSubmitBtn" status="warning" (click)="validateNum()">ادامه</button>
-              </div>
-            </form>
-          </div>
+<div class="sentCodeStep" *ngIf="codeSent && !codeSubmited">
+  <h2 mat-dialog-title>تایید شماره موبایل</h2>
+  <mat-dialog-content class="mat-typography">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
+          <p class="title"> وارد کردن کد یکبار مصرف
+          </p>
+          <p class="subTitle">لطفا کد رمزی که به شماره شما ارسال شده را وارد نمایید</p>
         </div>
       </div>
-    </mat-dialog-content>
-    <mat-dialog-actions align="end">
-      <button nbButton size="xsmall" mat-dialog-close>بستن</button>
-    </mat-dialog-actions>
-  </div>
+      <div class="row">
+        <div class="col phoneSection">
+
+          <form [formGroup]="codeForm">
+            <input class="codeInput" type="number" maxlength="6" formControlName="code" nbInput status="success"
+              placeholder="کد 6 رقمی ارسال شده را وارد کنید">
+            <div class="col">
+              <button nbButton hero class="codeSubmitBtn" status="danger">ارسال مجدد کد</button>
+              <button type="submit" nbButton hero class="codeSubmitBtn" status="warning"
+                (click)="submiteCode()">ادامه</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button nbButton size="xsmall" mat-dialog-close>بستن</button>
+  </mat-dialog-actions>
+</div>
+<div class="sentCodeStep" *ngIf="codeSubmited">
+  <h2 mat-dialog-title>ثبت ایمیل</h2>
+  <mat-dialog-content class="mat-typography">
+    <div class="">
+      <div class="row">
+        <div class="col">
+          <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
+          <p class="title"> ثبت ایمیل
+          </p>
+          <p class="subTitle">برای دریافت نتایج ثبت اسناد خود روی بلاک چین و استفاده از آن برای فرایند استعلام ایمیل خود را وارد کنید</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col phoneSection">
+
+          <form [formGroup]="mailForm">
+            <input class="codeInput" type="email" formControlName="email" nbInput status="success"
+              placeholder="ایمیل خود را وارد نمایید">
+            <div class="col">
+              <button type="submit" nbButton hero class="codeSubmitBtn" status="warning"
+                (click)="submiteCode()">ثبت</button>
+                <button nbButton outline class="codeSubmitBtn" mat-dialog-close size="small" status="info">بعدا ثبت میکنم</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </mat-dialog-content>
+</div>
