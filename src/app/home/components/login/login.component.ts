@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 		phone: new FormControl(undefined, [Validators.required])
   });
   invalidNum;
+  codeSent=false;
   constructor(
     public dialogRef: MatDialogRef<LoginComponent>,
   ) { }
@@ -26,6 +27,7 @@ export class LoginComponent implements OnInit {
      
    }else{
     this.invalidNum=false;
+    this.codeSent= true;
      console.log('valid num');
      
    }

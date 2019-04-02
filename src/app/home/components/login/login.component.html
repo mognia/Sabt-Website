@@ -1,4 +1,4 @@
-<div class="loginBody">
+<div class="loginBody " [class.hide]="codeSent" >
   <h2 mat-dialog-title>ورود / عضویت</h2>
   <mat-dialog-content class="mat-typography">
     <div class="">
@@ -13,7 +13,7 @@
       <div class="row">
         <div class="col phoneSection">
 
-          <form #f="ngForm" [formGroup]="phoneForm">
+          <form #phoneNumForm="ngForm" [formGroup]="phoneForm">
             <ngx-intl-tel-input class="phoneNum mx-auto" [cssClass]="'custom'" [preferredCountries]="['ir', 'us']"
               [enablePlaceholder]="true" [enableAutoCountrySelect]="true" name="phone" formControlName="phone">
             </ngx-intl-tel-input>
@@ -32,3 +32,33 @@
     <button nbButton size="xsmall" mat-dialog-close>بستن</button>
   </mat-dialog-actions>
 </div>
+<div class="sentCodeStep" [class.show]="codeSent">
+    <h2 mat-dialog-title>تایید شماره موبایل</h2>
+    <mat-dialog-content class="mat-typography">
+      <div class="">
+        <div class="row">
+          <div class="col">
+            <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
+            <p class="title"> وارد کردن کد یکبار مصرف
+            </p>
+            <p class="subTitle">لطفا کد رمزی که به شماره شما ارسال شده را وارد نمایید</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col phoneSection">
+  
+            <form #f="ngForm" [formGroup]="phoneForm">
+                <input class="codeInput" type="text" nbInput  status="success" placeholder="کد 6 رقمی ارسال شده را وارد کنید">
+              <div class="col ">
+                  <button nbButton hero class="codeSubmitBtn" status="danger" (click)="validateNum()">ارسال مجدد کد</button>
+                <button nbButton hero  class="codeSubmitBtn" status="warning" (click)="validateNum()">ادامه</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+      <button nbButton size="xsmall" mat-dialog-close>بستن</button>
+    </mat-dialog-actions>
+  </div>
