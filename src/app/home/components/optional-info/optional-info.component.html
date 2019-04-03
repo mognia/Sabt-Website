@@ -2,16 +2,17 @@
   <div class="discribe">
     <p>توجه کنید اطلاعات خواسته شده در این قسمت الزامی نیست</p>
   </div>
+  <form [formGroup]="optionalInputForm" >
   <div class="input">
-    <input type="text" nbInput placeholder="نام">
+    <input formControlName="firstName" (change)="getFirstName($event)" type="text" nbInput placeholder="نام">
   </div>
   <div class="input">
 
-    <input type="text" nbInput placeholder="نام خانوادگی">
+    <input formControlName="lastName" (change)="getLastName($event)" type="text" nbInput placeholder="نام خانوادگی">
   </div>
   <div class="input">
 
-      <textarea nbInput fullWidth  placeholder="توضیحات"></textarea>
+      <textarea formControlName="comment" (change)="getComment($event)" nbInput fullWidth  placeholder="توضیحات"></textarea>
     </div>
-  
+  </form>
 </div>

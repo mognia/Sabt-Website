@@ -5,20 +5,20 @@
         <nb-card>
           <nb-card-body class="cardBody">
             <nb-stepper orientation="horizontal">
-              <nb-step [label]="labelOne" [stepControl]="firstForm">
+              <nb-step [label]="labelOne" [stepControl]="fileInputForm">
                 <ng-template #labelOne>ثبت محتوا</ng-template>
-                <form [formGroup]="firstForm">
-                  <input type="text" style="display:none" class="form-control" formControlName="firstCtrl" />
+                <form [formGroup]="fileInputForm">
+                  <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
                 </form>
 
                 <file-uploader (fileInputChange)="
-                    firstForm.setValue({ firstCtrl: $event?.files?.length }) ;
-                    stepCtrlBtn($event)
+                    fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
                   "></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
-                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
+                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext (click)="getInputFile()"
+                  type="submit">
                   بعدی
                 </button>
                 <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
@@ -29,7 +29,7 @@
                 <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
                 <nb-card>
                   <nb-card-body>
-                    <optional-info>
+                    <optional-info optionalInputChange="getOptionalValue($event)">
                     </optional-info>
                   </nb-card-body>
                 </nb-card>

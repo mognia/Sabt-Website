@@ -5,19 +5,25 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class FileInputService {
-  file = false;
+  hasFile = false;
   fileChange: Subject<any> = new Subject<any>();
+  inptFile;
   constructor() { }
 
-   isValid = true;
   validate(file){
-     console.log(file);
-    if (this.isValid) {
-      this.file = true;
-      this.fileChange.next(this.file)
+    // here we can add our file validation
+     let isValid = true;
+    //get the file that user inputed
+    this.inptFile = file;
+    
+    //if every thing is ok we say we have a file here 
+    if (isValid) {
+      this.hasFile = true;
+      this.fileChange.next(this.hasFile)
     }
   }
-  hasFile(){
-    return this.file;
+  getOptionalInfo(userInfo){
+    console.log(userInfo);
+    
   }
 }

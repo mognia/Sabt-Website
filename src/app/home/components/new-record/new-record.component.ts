@@ -13,7 +13,7 @@ export class NewRecordComponent implements OnInit {
   isValid;
   _subscription;
   linearMode = true;
-  firstForm: FormGroup;
+  fileInputForm: FormGroup;
 
   inputFile = { files: { length: 0 } };
   @Input() uploader: UploaderComponent;
@@ -21,25 +21,30 @@ export class NewRecordComponent implements OnInit {
     private fileInputService: FileInputService,
     private fb: FormBuilder
   ) {
-    this.firstForm = this.fb.group({
-      firstCtrl: ["",] // stepValidator
+    this.fileInputForm = this.fb.group({
+      fileCtrl: ["", stepValidator] // stepValidator
     });
 
-    this._subscription = fileInputService.fileChange.subscribe(value => {
-      console.log(value);
-      
+    this._subscription = fileInputService.fileChange.subscribe(value => {      
       this.hasFile = value;
       this.isValid = value;
     });
 
-    
+
   }
 
-  stepCtrlBtn(e){
-   
+  getOptionalValue(e) {
+    console.log(e);
+    
+
+  }
+  ngOnInit() { }
+
+  getInputFile() {
+   let inputedFile = this.fileInputForm.controls['fileCtrl'] ;
+   console.log(this.hasFile);
    
   }
-  ngOnInit() {}
 }
 
 export function stepValidator(control: FormControl) {
@@ -49,7 +54,4 @@ export function stepValidator(control: FormControl) {
   } else {
     return { fileNotFound: true };
   }
-}
-function stepCtrlBtn() {
-  
 }
