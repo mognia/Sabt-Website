@@ -17,7 +17,7 @@
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
-                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext (click)="getInputFile()"
+                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext 
                   type="submit">
                   بعدی
                 </button>
@@ -39,7 +39,12 @@
                 <button class="fontFamily" nbButton nbStepperNext>بعدی</button>
               </nb-step>
               <nb-step label="تایید">
-                <h3>Step content #3</h3>
+                <nb-card>
+                  <nb-card-body>
+                    <review-info>
+                    </review-info>
+                  </nb-card-body>
+                </nb-card>
                 <button class="fontFamily" nbButton nbStepperPrevious>
                   قبلی
                 </button>

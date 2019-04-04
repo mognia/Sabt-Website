@@ -1,4 +1,4 @@
-import { Injectable  } from '@angular/core';
+import { Injectable, EventEmitter, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -8,6 +8,8 @@ export class FileInputService {
   hasFile = false;
   fileChange: Subject<any> = new Subject<any>();
   inptFile;
+  userInfo={};
+  userInfoChange = new EventEmitter<any>();
   constructor() { }
 
   validate(file){
@@ -15,7 +17,9 @@ export class FileInputService {
      let isValid = true;
     //get the file that user inputed
     this.inptFile = file;
-    
+    this.userInfo['fileName'] = this.inptFile.name;
+
+    this.userInfoChange.emit(this.userInfo);
     //if every thing is ok we say we have a file here 
     if (isValid) {
       this.hasFile = true;
@@ -23,7 +27,12 @@ export class FileInputService {
     }
   }
   getOptionalInfo(userInfo){
-    console.log(userInfo);
-    
+    this.userInfo = userInfo;
+    this.userInfo['fileName'] = this.inptFile.name;
+    this.userInfoChange.emit(this.userInfo);
+  }
+
+  getUserInfo(){
+    return this.userInfo
   }
 }

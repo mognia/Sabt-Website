@@ -27,7 +27,7 @@ export class UploaderComponent implements OnInit {
   @Output() fileInputChange = new EventEmitter<any>();
   sendToValidation(e){
     let file = e.target.files[0];
-
+    
     this.fileInputService.validate(file);
   }
 }

@@ -22,7 +22,7 @@ export class NewRecordComponent implements OnInit {
     private fb: FormBuilder
   ) {
     this.fileInputForm = this.fb.group({
-      fileCtrl: ["", stepValidator] // stepValidator
+      fileCtrl: ["", ] // stepValidator
     });
 
     this._subscription = fileInputService.fileChange.subscribe(value => {      
@@ -32,19 +32,8 @@ export class NewRecordComponent implements OnInit {
 
 
   }
-
-  getOptionalValue(e) {
-    console.log(e);
-    
-
-  }
   ngOnInit() { }
 
-  getInputFile() {
-   let inputedFile = this.fileInputForm.controls['fileCtrl'] ;
-   console.log(this.hasFile);
-   
-  }
 }
 
 export function stepValidator(control: FormControl) {

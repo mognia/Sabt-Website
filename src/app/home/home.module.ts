@@ -51,6 +51,7 @@ import { LoginComponent } from './components/login/login.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { ReviewInfoComponent } from './components/review-info/review-info.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -113,6 +114,7 @@ const HOME_COMPONENTS = [
   ],
   declarations: [
     ...HOME_COMPONENTS,
+    ReviewInfoComponent,
   ],
   entryComponents:[
     LoginComponent,
