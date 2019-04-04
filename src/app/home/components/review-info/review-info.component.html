@@ -1,28 +1,41 @@
 <div class="row">
   <div class="col-6">
-      <div class="input">
-        <p class="inputTitle">نام فایل</p>
-          <input   [(ngModel)]="fileName" disabled type="text" nbInput >
-        </div>
+    <div class="input">
+      <p class="inputTitle">نام فایل</p>
+      <input [(ngModel)]="fileName" disabled type="text" nbInput>
+    </div>
   </div>
   <div class="col-6">
-      <div class="input">
-          <p class="inputTitle">توضیحات</p>
-          <input [(ngModel)]="comment" type="text" nbInput >
-        </div>
+    <div class="input">
+      <p class="inputTitle">توضیحات</p>
+      <input [(ngModel)]="comment" disabled type="text" nbInput>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-6">
+    <div class="input">
+      <p class="inputTitle">نام خانوادگی</p>
+      <input [(ngModel)]="lastName" disabled type="text" nbInput>
+    </div>
+  </div>
+  <div class="col-6">
+    <div class="input">
+      <p class="inputTitle">نام </p>
+      <input [(ngModel)]="firstName" disabled type="text" nbInput>
+    </div>
   </div>
 </div>
 <div class="row">
     <div class="col-6">
-        <div class="input">
-            <p class="inputTitle">نام خانوادگی</p>
-            <input [(ngModel)]="lastName" type="text" nbInput >
-          </div>
+      <div class="input">
+        <p class="inputTitle">آدرس ایمیل</p>
+        <input [(ngModel)]="email" disabled type="text" nbInput>
+      </div>
     </div>
     <div class="col-6">
-        <div class="input">
-            <p class="inputTitle">نام </p>
-            <input [(ngModel)]="firstName"  type="text" nbInput >
-          </div>
+      <div class="input">
+          <nb-checkbox>ثبت سریع</nb-checkbox>
+      </div>
     </div>
   </div>
