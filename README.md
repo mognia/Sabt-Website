@@ -1,6 +1,7 @@
 ### intall angular Cli
-First You should have NodeJS installed in your system
-then run : npm install -g @angular/cli
+Angular requires Node.js version 8.x or 10.x.
+
+after installing nodeJS then run : npm install -g @angular/cli
 
 ### install Node_Modules
 after installing acgular/cli you should goto root folder of project
