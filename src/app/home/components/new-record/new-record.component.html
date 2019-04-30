@@ -6,14 +6,12 @@
           <nb-card-body class="cardBody">
             <nb-stepper orientation="horizontal">
               <nb-step [label]="labelOne" [stepControl]="fileInputForm">
-                <ng-template #labelOne >ثبت محتوا</ng-template>
+                <ng-template #labelOne>ثبت محتوا</ng-template>
                 <form [formGroup]="fileInputForm">
                   <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
                 </form>
 
-                <file-uploader (fileInputChange)="
-                    fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
-                  "></file-uploader>
+                <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; "></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
@@ -28,8 +26,10 @@
                 <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
                 <nb-card>
                   <nb-card-body>
+                    <!-- Oprtional info Component -->
                     <optional-info optionalInputChange="getOptionalValue($event)">
                     </optional-info>
+                    <!--  -->
                   </nb-card-body>
                 </nb-card>
                 <button class="fontFamily" nbButton nbStepperPrevious>
@@ -40,8 +40,10 @@
               <nb-step label="تایید">
                 <nb-card>
                   <nb-card-body>
+                    <!-- Review info component -->
                     <review-info>
                     </review-info>
+                    <!--  -->
                   </nb-card-body>
                 </nb-card>
                 <button class="fontFamily" nbButton nbStepperPrevious>
@@ -56,50 +58,9 @@
         </nb-card>
       </nb-tab>
       <nb-tab tabTitle="استعلام">
-        <nb-card>
-          <nb-card-body class="cardBody">
-            <nb-stepper orientation="horizontal">
-              <nb-step [label]="labelOne" [stepControl]="fileInputForm">
-                <ng-template #labelOne>ثبت محتوا</ng-template>
-                <form [formGroup]="fileInputForm">
-                  <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
-                </form>
-
-                <file-uploader (fileInputChange)="
-                    fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
-                  "></file-uploader>
-                <button class="fontFamily" nbButton disabled nbStepperNext>
-                  قبلی
-                </button>
-                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
-                  بعدی
-                </button>
-                <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
-                  بعدی
-                </button>
-              </nb-step>
-              <nb-step [label]="labelOne1" [stepControl]="">
-                <ng-template #labelOne1>گذاشتن لایسنس</ng-template>
-                <form [formGroup]="fileInputForm">
-                  <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
-                </form>
-
-                <file-uploader (fileInputChange)="
-                    fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
-                  "></file-uploader>
-                <button class="fontFamily" nbButton disabled nbStepperNext>
-                  قبلی
-                </button>
-                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
-                  ادعای رکورد
-                </button>
-                <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
-                  ادعای رکورد
-                </button>
-              </nb-step>
-            </nb-stepper>
-          </nb-card-body>
-        </nb-card>
+        <!-- new claim Component -->
+        <new-claim></new-claim>
+        <!--  -->
       </nb-tab>
     </nb-tabset>
   </nb-card-body>

@@ -1,0 +1,45 @@
+
+    <nb-card>
+      <nb-card-body class="cardBody">
+        <nb-stepper orientation="horizontal">
+          <nb-step [label]="labelOne" [stepControl]="claimInputForm">
+            <ng-template #labelOne>ثبت محتوا</ng-template>
+            <form [formGroup]="claimInputForm">
+              <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
+            </form>
+
+            <file-uploader (fileInputChange)="
+            claimInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
+              "></file-uploader>
+            <button class="fontFamily" nbButton disabled nbStepperNext>
+              قبلی
+            </button>
+            <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
+              بعدی
+            </button>
+            <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
+              بعدی
+            </button>
+          </nb-step>
+          <nb-step [label]="labelOne1" [stepControl]="">
+            <ng-template #labelOne1>گذاشتن لایسنس</ng-template>
+            <form [formGroup]="lisenceInputForm">
+              <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
+            </form>
+
+            <file-uploader (fileInputChange)="
+            lisenceInputForm.setValue({ fileCtrl: $event?.files?.length }) ;
+              "></file-uploader>
+            <button class="fontFamily" nbButton disabled nbStepperNext>
+              قبلی
+            </button>
+            <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
+              ادعای رکورد
+            </button>
+            <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
+              ادعای رکورد
+            </button>
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+    </nb-card>

@@ -57,6 +57,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { LoginPhoneinputComponent } from './components/login-phoneinput/login-phoneinput.component';
 import { LoginCodeinputComponent } from './components/login-codeinput/login-codeinput.component';
 import { LoginMailinputComponent } from './components/login-mailinput/login-mailinput.component';
+import { NewClaimComponent } from './components/new-claim/new-claim.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -125,6 +126,7 @@ const HOME_COMPONENTS = [
     LoginPhoneinputComponent,
     LoginCodeinputComponent,
     LoginMailinputComponent,
+    NewClaimComponent,
   ],
   entryComponents:[
     LoginComponent,
