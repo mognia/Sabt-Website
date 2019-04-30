@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginComponent } from "./../login/login.component";
-import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+
 
 @Component({
   selector: 'home-header',
@@ -9,14 +8,10 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  openLoginDialog(): void {
 
-    this.dialog.open(LoginComponent,{disableClose: true , width:'40%' });
-
-  }
 }

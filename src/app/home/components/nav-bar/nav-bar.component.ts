@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { LoginComponent } from "./../login/login.component";
 
 @Component({
   selector: 'nav-bar',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
   }
+  openLoginDialog(): void {
 
+    this.dialog.open(LoginComponent,{disableClose: true , width:'40%' });
+
+  }
 }
