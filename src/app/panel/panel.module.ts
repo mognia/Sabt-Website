@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 
-import { PagesComponent } from './pages.component';
+import { PanelComponent } from './panel.component';
 
-import { PagesRoutingModule } from './pages-routing.module';
+import { PagesRoutingModule } from './panel-routing.module';
 import { DashboardModule } from "./dashboard/dashboard.module";
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 
-const PAGES_COMPONENTS = [
-  PagesComponent,
+const PANEL_COMPONENTS = [
+  PanelComponent,
 ];
 
 @NgModule({
@@ -19,10 +19,10 @@ const PAGES_COMPONENTS = [
     MiscellaneousModule,
   ],
   declarations: [
-    ...PAGES_COMPONENTS,
+    ...PANEL_COMPONENTS,
   ],
 
 
 })
-export class PagesModule {
+export class PanelModule {
 }
