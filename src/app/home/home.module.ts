@@ -53,6 +53,7 @@ import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { ReviewInfoComponent } from './components/review-info/review-info.component';
 import { CopyRightComponent } from './components/copy-right/copy-right.component';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -117,6 +118,7 @@ const HOME_COMPONENTS = [
     ...HOME_COMPONENTS,
     ReviewInfoComponent,
     CopyRightComponent,
+    NavBarComponent,
   ],
   entryComponents:[
     LoginComponent,

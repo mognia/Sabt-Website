@@ -2,54 +2,10 @@
 
 <header id="home" class="hero-area-2">
   <div class="overlay"></div>
-  <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
-    <div class="container">
 
+  <!-- navbar omponent -->
+  <nav-bar></nav-bar>
 
-      <a href="index.html" class="navbar-brand">
-        <img src="../../../../assets/img/logo.png" alt="">
-      </a>
-
-
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="lni-menu"></i>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav hyperLinks mr-auto w-100 justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#home">خانه</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#app-features">مزایا</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#docs">مقالات</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link page-scroll" href="#download">اپلیکیشن</a>
-          </li>
-
-        </ul>
-        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-
-          <li class="nav-item">
-              <button  (click)='openLoginDialog()' nbButton outline status="success" class="btn">
-                ورود / عضویت
-              </button>
-          </li>
-
-          <li class="nav-item">
-              <a nbButton hero status="primary" href="#home" class="btn page-scroll" >ثبت جدید</a>
-          </li>
-
-        </ul>
-      </div>
-
-    </div>
-  </nav>
   <div class="container ">
     <div class="container-bg"> </div>
     <div class="row ">
@@ -63,8 +19,10 @@
     </div>
     <div class="row">
       <div class="col-md-12">
-        <new-record ></new-record>
-        
+
+        <!-- New Record Component -->
+        <new-record></new-record>
+
       </div>
 
     </div>
