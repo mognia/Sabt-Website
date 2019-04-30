@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { LoginPhoneinputComponent } from "../login-phoneinput/login-phoneinput.component";
+import { LoginCodeinputComponent } from "../login-codeinput/login-codeinput.component";
+import { LoginMailinputComponent } from "../login-mailinput/login-mailinput.component";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -9,9 +11,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  codeForm = new FormGroup({
-    code: new FormControl(undefined, [Validators.required])
-  });
+
   mailForm = new FormGroup({
     email: new FormControl()
   });
@@ -19,6 +19,8 @@ export class LoginComponent implements OnInit {
   codeSent = false;
   codeSubmited = false;
   @Input() PhoneInput:LoginPhoneinputComponent;
+  @Input() CodeInput:LoginCodeinputComponent;
+  @Input() MAilInput:LoginMailinputComponent;
   constructor() { }
 
   ngOnInit() {
@@ -28,13 +30,8 @@ export class LoginComponent implements OnInit {
     this.codeSent = true;
 
   }
-
-  submiteCode() {
-    if (this.codeForm.valid) {
-      this.codeSubmited = true;
-    }
-    else {
-
-    }
+  submitCode(){
+    this.codeSubmited = true;
   }
+
 }

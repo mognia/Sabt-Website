@@ -13,7 +13,7 @@ export class LoginPhoneinputComponent implements OnInit {
   });
   invalidNum;
   @Output() codeSent = new EventEmitter<any>();
-  constructor(public dialogRef: MatDialogRef<LoginPhoneinputComponent>,
+  constructor(public dialogRef: MatDialogRef<LoginPhoneinputComponent>
   ) { }
 
   ngOnInit() {

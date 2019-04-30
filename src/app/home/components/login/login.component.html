@@ -11,40 +11,8 @@
 
 </div>
 <div class="sentCodeStep" *ngIf="codeSent && !codeSubmited">
-  <div class="header">
-    <button mat-dialog-close type="button" class="btn btn-danger closeBtn">
-
-      <i class="fas fa-times"></i>
-    </button>
-    <p mat-dialog-title>تایید شماره موبایل</p>
-  </div>
-
-  <mat-dialog-content class="mat-typography">
-    <div class="">
-      <div class="row">
-        <div class="col">
-          <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
-          <p class="title"> وارد کردن کد یکبار مصرف
-          </p>
-          <p class="subTitle">لطفا کد رمزی که به شماره شما ارسال شده را وارد نمایید</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col phoneSection">
-
-          <form [formGroup]="codeForm">
-            <input class="codeInput" type="number" maxlength="6" formControlName="code" nbInput status="success"
-              placeholder="کد 6 رقمی ارسال شده را وارد کنید">
-            <div class="col">
-              <button nbButton hero class="codeSubmitBtn" status="danger">ارسال مجدد کد</button>
-              <button type="submit" nbButton hero class="codeSubmitBtn" status="warning"
-                (click)="submiteCode()">ادامه</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </mat-dialog-content>
+  <!-- Sent code to phone input component -->
+  <login-codeinput (codeConfirmed)='submitCode()'></login-codeinput>
 </div>
 <div class="sentCodeStep" *ngIf="codeSubmited">
   <div class="header">
