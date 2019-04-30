@@ -52,6 +52,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { ReviewInfoComponent } from './components/review-info/review-info.component';
+import { CopyRightComponent } from './components/copy-right/copy-right.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -115,6 +116,7 @@ const HOME_COMPONENTS = [
   declarations: [
     ...HOME_COMPONENTS,
     ReviewInfoComponent,
+    CopyRightComponent,
   ],
   entryComponents:[
     LoginComponent,
