@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { Component, OnInit, Input } from '@angular/core';
+import { LoginPhoneinputComponent } from "../login-phoneinput/login-phoneinput.component";
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -8,42 +8,32 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-	phoneForm = new FormGroup({
-		phone: new FormControl(undefined, [Validators.required])
-  });
+
   codeForm = new FormGroup({
-		code: new FormControl(undefined, [Validators.required])
+    code: new FormControl(undefined, [Validators.required])
   });
   mailForm = new FormGroup({
-		email: new FormControl()
+    email: new FormControl()
   });
-  invalidNum;
-  codeSent=false;
-  codeSubmited=false;
-  constructor(
-    public dialogRef: MatDialogRef<LoginComponent>,
-  ) { }
+
+  codeSent = false;
+  codeSubmited = false;
+  @Input() PhoneInput:LoginPhoneinputComponent;
+  constructor() { }
 
   ngOnInit() {
   }
-  validateNum(){
-   let userPhone = this.phoneForm.controls['phone'];
-   if (userPhone.errors !=null) { 
-     this.invalidNum=true;
-     console.log('invalid num');
-     
-   }else{
-    this.invalidNum=false;
-    this.codeSent= true;
-     console.log('valid num');
-     
-   }
+
+  sendCode() {
+    this.codeSent = true;
+
   }
-  submiteCode(){
+
+  submiteCode() {
     if (this.codeForm.valid) {
       this.codeSubmited = true;
     }
-    else{
+    else {
 
     }
   }

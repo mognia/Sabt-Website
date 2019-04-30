@@ -54,6 +54,9 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 import { ReviewInfoComponent } from './components/review-info/review-info.component';
 import { CopyRightComponent } from './components/copy-right/copy-right.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { LoginPhoneinputComponent } from './components/login-phoneinput/login-phoneinput.component';
+import { LoginCodeinputComponent } from './components/login-codeinput/login-codeinput.component';
+import { LoginMailinputComponent } from './components/login-mailinput/login-mailinput.component';
 
 const NB_MODULES = [
   NbCardModule,
@@ -119,6 +122,9 @@ const HOME_COMPONENTS = [
     ReviewInfoComponent,
     CopyRightComponent,
     NavBarComponent,
+    LoginPhoneinputComponent,
+    LoginCodeinputComponent,
+    LoginMailinputComponent,
   ],
   entryComponents:[
     LoginComponent,

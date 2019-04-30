@@ -6,34 +6,9 @@
     </button>
     <p mat-dialog-title>ورود / عضویت</p>
   </div>
-  <mat-dialog-content class="mat-typography">
-    <div class="">
-      <div class="row">
-        <div class="col">
-          <img class="regLogo mx-auto" src="../../../../assets/img/team/team1.jpg" alt="">
-          <p class="title"> ثبت نام و ورود اعضا
-          </p>
-          <p class="subTitle">با وارد کردن شماره موبایل خود یک کد رمز یکبار مصرف به شماره شما ارسال خواهد شد</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col phoneSection">
+  <!-- Phone input Step is in this component -->
+ <login-phoneinput (codeSent)='sendCode()'></login-phoneinput>
 
-          <form #phoneNumForm="ngForm" [formGroup]="phoneForm">
-            <ngx-intl-tel-input class="phoneNum mx-auto" [cssClass]="'custom'" [onlyCountries]="['ir', 'us','uk']"
-              [enablePlaceholder]="true" [enableAutoCountrySelect]="true" name="phone" formControlName="phone">
-            </ngx-intl-tel-input>
-            <div *ngIf="invalidNum">
-              <nb-alert status="danger" class="alert">شماره وارد شده صحیح نمیباشد! دوباره چک کنید</nb-alert>
-            </div>
-            <div class="col phoneSubmitBtn">
-              <button nbButton hero status="warning" class="codeSubmitBtn" (click)="validateNum()">ارسال رمز</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </mat-dialog-content>
 </div>
 <div class="sentCodeStep" *ngIf="codeSent && !codeSubmited">
   <div class="header">
