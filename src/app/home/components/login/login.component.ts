@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter } from '@angular/core';
 import { LoginPhoneinputComponent } from '../login-phoneinput/login-phoneinput.component';
 import { LoginCodeinputComponent } from '../login-codeinput/login-codeinput.component';
 import { LoginMailinputComponent } from '../login-mailinput/login-mailinput.component';
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
       this.hasEmail = false;
       
     } else {
-      
+      this.authService.closeDialog.next(true);
     }
   }
 
