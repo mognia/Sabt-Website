@@ -29,7 +29,7 @@ export class LoginPhoneinputComponent implements OnInit {
       this.invalidNum = false;
       this.codeSent.emit('codeSent');
       this.authService.loginUser({phone: userPhone}).subscribe(res=>{
-        console.log(res);
+        // TODO: add response
       });
     }
   }

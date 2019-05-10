@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 })
 export class AuthService {
   constructor(private http: HttpClient) { }
-
+  authToken;
   loginUser(userPhone){
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
@@ -19,5 +19,11 @@ export class AuthService {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/getCode', code, { headers: headers });
+  }
+  saveUserData(user,token){
+
+    localStorage.setItem('id_token', token);
+    localStorage.setItem('user', JSON.stringify(user));
+    this.authToken = token;
   }
 }

@@ -23,6 +23,9 @@ export class LoginCodeinputComponent implements OnInit {
     this.authService.sendCode({code: value}).subscribe(res => {
       const success = res['success'];
       if (success) {
+        const user = res['account'];
+        const token = res['token'];
+        this.authService.saveUserData(user, token);
         this.codeConfirmed.emit('codeConfirmed');
       } else {
         this.wrongCode = true;
