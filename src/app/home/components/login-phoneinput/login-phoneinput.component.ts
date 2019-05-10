@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { AuthService } from "../../../services/auth.service";
+import { AuthService } from '../../../services/auth.service';
 @Component({
   selector: 'login-phoneinput',
   templateUrl: './login-phoneinput.component.html',
@@ -30,7 +30,7 @@ export class LoginPhoneinputComponent implements OnInit {
       this.codeSent.emit('codeSent');
       this.authService.loginUser({phone: userPhone}).subscribe(res=>{
         console.log(res);
-      })
+      });
     }
   }
 }

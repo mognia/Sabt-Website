@@ -19,13 +19,15 @@
       <div class="row">
         <div class="col phoneSection">
 
-          <form [formGroup]="codeForm">
+          <form [formGroup]="codeForm"  (ngSubmit)="submiteCode(codeForm.value)">
             <input class="codeInput" type="number" maxlength="6" formControlName="code" nbInput status="success"
               placeholder="کد 6 رقمی ارسال شده را وارد کنید">
+              <div class="col" *ngIf='wrongCode'>
+                <p class="wrongCode">{{msg}}</p>
+              </div>
             <div class="col">
-              <button nbButton hero class="codeSubmitBtn" status="danger">ارسال مجدد کد</button>
-              <button type="submit" nbButton hero class="codeSubmitBtn" status="warning"
-                (click)="submiteCode()">ادامه</button>
+              <button type="button" nbButton hero class="codeSubmitBtn" status="danger">ارسال مجدد کد</button>
+              <button type="submit" nbButton hero class="codeSubmitBtn" status="warning">ادامه</button>
             </div>
           </form>
         </div>
