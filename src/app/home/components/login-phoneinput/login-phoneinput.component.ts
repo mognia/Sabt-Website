@@ -9,7 +9,7 @@ import { AuthService } from '../../../services/auth.service';
 })
 export class LoginPhoneinputComponent implements OnInit {
   phoneForm = new FormGroup({
-    phone: new FormControl(undefined, [Validators.required])
+    phone: new FormControl('', Validators.required)
   });
   invalidNum;
   @Output() codeSent = new EventEmitter<any>();
@@ -22,7 +22,7 @@ export class LoginPhoneinputComponent implements OnInit {
   }
   validateNum(num) {
     const userPhone = num.phone.number;
-    if (userPhone.errors != null) {
+    if (this.phoneForm.invalid) {
       this.invalidNum = true;
 
     } else {

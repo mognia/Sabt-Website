@@ -14,7 +14,7 @@ export class LoginCodeinputComponent implements OnInit {
     public dialogRef: MatDialogRef<LoginCodeinputComponent>,
     public authService: AuthService) { }
   codeForm = new FormGroup({
-    code: new FormControl(undefined, [Validators.required]),
+    code: new FormControl('', [Validators.required]),
   });
   @Output() codeConfirmed = new EventEmitter<any>();
   ngOnInit() {
