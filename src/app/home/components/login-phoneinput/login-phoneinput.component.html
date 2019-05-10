@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col phoneSection">
 
-          <form #phoneNumForm="ngForm" [formGroup]="phoneForm">
+          <form #phoneNumForm="ngForm" [formGroup]="phoneForm"  (ngSubmit)="validateNum(phoneNumForm.value)">
             <ngx-intl-tel-input class="phoneNum mx-auto" [cssClass]="'custom'" [onlyCountries]="['ir', 'us','uk']"
               [enablePlaceholder]="true" [enableAutoCountrySelect]="true" name="phone" formControlName="phone">
             </ngx-intl-tel-input>
@@ -19,7 +19,7 @@
               <nb-alert status="danger" class="alert">شماره وارد شده صحیح نمیباشد! دوباره چک کنید</nb-alert>
             </div>
             <div class="col phoneSubmitBtn">
-              <button nbButton hero status="warning" class="codeSubmitBtn" (click)="validateNum()">ارسال رمز</button>
+              <button type="submit" nbButton hero status="warning" class="codeSubmitBtn">ارسال رمز</button>
             </div>
           </form>
         </div>

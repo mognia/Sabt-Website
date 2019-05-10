@@ -1,7 +1,7 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-
+import { AuthService } from "../../../services/auth.service";
 @Component({
   selector: 'login-phoneinput',
   templateUrl: './login-phoneinput.component.html',
@@ -13,22 +13,24 @@ export class LoginPhoneinputComponent implements OnInit {
   });
   invalidNum;
   @Output() codeSent = new EventEmitter<any>();
-  constructor(public dialogRef: MatDialogRef<LoginPhoneinputComponent>
+  constructor(
+    public dialogRef: MatDialogRef<LoginPhoneinputComponent>,
+    public authService: AuthService,
   ) { }
 
   ngOnInit() {
   }
-  validateNum() {
-    let userPhone = this.phoneForm.controls['phone'];
+  validateNum(num) {
+    const userPhone = num.phone.number;
     if (userPhone.errors != null) {
       this.invalidNum = true;
-      console.log('invalid num');
 
     } else {
       this.invalidNum = false;
       this.codeSent.emit('codeSent');
-      console.log('valid num');
-
+      this.authService.loginUser({phone: userPhone}).subscribe(res=>{
+        console.log(res);
+      })
     }
   }
 }
