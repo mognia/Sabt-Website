@@ -30,8 +30,12 @@
       <ul class="navbar-nav mr-auto w-100 justify-content-end">
 
         <li class="nav-item">
-          <button (click)='openLoginDialog()' nbButton outline status="success" class="btn">
+          <button *ngIf='!userLogedin' (click)='openLoginDialog()' nbButton outline status="success" class="btn">
             ورود / عضویت
+          </button>
+          <button  *ngIf='userLogedin' (click)='gotoPanel()' nbButton outline status="success" class="btn">
+            
+          پنل کاربری
           </button>
         </li>
 

@@ -11,6 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) { }
   authToken;
   logedUser;
+
   loginUser(userPhone) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
@@ -27,6 +28,18 @@ export class AuthService {
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
     this.logedUser = user;
+  
+  }
+  userLoginStatus(){
+    const token = localStorage.getItem('id_token');
+    if (token == null) {
+      
+      return false;
+    }
+    else{
+      return true;
+    }
+    
   }
 
 }
