@@ -1,6 +1,4 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
-import { HttpModule } from '@angular/http';
 import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import 'rxjs/add/operator/map';
@@ -10,6 +8,7 @@ import 'rxjs/add/operator/map';
 export class AuthService {
   constructor(private http: HttpClient) { }
   authToken;
+  logedUser;
   loginUser(userPhone){
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
@@ -25,5 +24,6 @@ export class AuthService {
     localStorage.setItem('id_token', token);
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
+    this.logedUser = user;
   }
 }

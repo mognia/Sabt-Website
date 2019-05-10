@@ -14,7 +14,7 @@
   <!-- Sent code to phone input component -->
   <login-codeinput (codeConfirmed)='submitCode()'></login-codeinput>
 </div>
-<div class="sentCodeStep" *ngIf="codeSubmited">
+<div class="sentCodeStep" *ngIf="!hasEmail">
   <!-- adding email after loged in component -->
   <login-mailInput></login-mailInput>
 </div>
