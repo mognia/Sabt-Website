@@ -10,7 +10,7 @@ export class FileInputService {
   inptFile;
   userInfo= {};
   userInfoChange = new EventEmitter<any>();
-  openMailInputFromRecorder= new EventEmitter<any>();
+  openMailInputFromRecorder: Subject<any> = new Subject<any>();
   constructor() { }
 
   validate(file) {

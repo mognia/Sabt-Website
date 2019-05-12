@@ -27,7 +27,7 @@ export class NewRecordComponent implements OnInit {
     private fb: FormBuilder,
   ) {
     this.fileInputForm = this.fb.group({
-      fileCtrl: ['', stepValidator ], //
+      fileCtrl: ['', stepValidator], //
     });
 
     this._subscription = fileInputService.fileChange.subscribe(value => {
@@ -41,11 +41,17 @@ export class NewRecordComponent implements OnInit {
   mailStatus() {
     this.haveEmail = false;
   }
-  submitRecord(){
+  submitRecord() {
+
     if (!this.haveEmail) {
-      
-    this.dialog.open(LoginMailinputComponent, {disableClose: true , width: '40%' });
-    this.fileInputService.openMailInputFromRecorder.next(true);
+      this.dialog.open(LoginMailinputComponent, {
+         disableClose: true,
+         width: '40%',
+         data: {
+          haveEmail: this.haveEmail,
+        },
+        });
+      this.fileInputService.openMailInputFromRecorder.next('fromRecorder');
     } else {
       // TODO: send data to service
     }

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { FileInputService } from '../../../services/file-input.service';
+import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import {MAT_DIALOG_DATA} from '@angular/material';
 @Component({
   selector: 'login-mailInput',
   templateUrl: './login-mailinput.component.html',
@@ -10,16 +10,18 @@ export class LoginMailinputComponent implements OnInit {
   openFromRecorder = false;
   mailForm;
   constructor(
-    private fileInputService: FileInputService,
-  ) { }
+    @Inject(MAT_DIALOG_DATA) public data: any,
+  ) {
+   }
 
   ngOnInit() {
     this.mailForm = new FormGroup({
       email: new FormControl('', [Validators.required]),
     });
-    this.fileInputService.openMailInputFromRecorder.subscribe(val =>{
+    if (!this.data.haveEmail) {
       this.openFromRecorder = true;
-    });
+    }
+
   }
 
 }
