@@ -8,11 +8,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class LoginMailinputComponent implements OnInit {
   openFromRecorder = false;
+  mailForm;
   constructor(
     private fileInputService: FileInputService,
   ) { }
 
   ngOnInit() {
+    this.mailForm = new FormGroup({
+      email: new FormControl('', [Validators.required]),
+    });
     this.fileInputService.openMailInputFromRecorder.subscribe(val =>{
       this.openFromRecorder = true;
     });
