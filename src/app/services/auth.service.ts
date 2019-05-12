@@ -17,7 +17,7 @@ export class AuthService {
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/getUserPhone', userPhone, { headers: headers });
   }
-  sendCode(code){
+  sendCode(code) {
     const headers = new HttpHeaders();
     headers.append('Content-Type', 'application/json');
     return this.http.post('http://localhost:3000/getCode', code, { headers: headers });
@@ -28,18 +28,17 @@ export class AuthService {
     localStorage.setItem('user', JSON.stringify(user));
     this.authToken = token;
     this.logedUser = user;
-  
+
   }
-  userLoginStatus(){
+  userLoginStatus() {
     const token = localStorage.getItem('id_token');
     if (token == null) {
-      
+
       return false;
-    }
-    else{
+    } else {
       return true;
     }
-    
+
   }
 
 }

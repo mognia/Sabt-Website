@@ -26,7 +26,7 @@
             <div class="col">
               <button type="submit" nbButton hero class="codeSubmitBtn" status="warning"
                 (click)="submiteCode()">ثبت</button>
-              <button nbButton outline class="codeSubmitBtn" mat-dialog-close size="small" status="info">بعدا ثبت
+              <button *ngIf='!openFromRecorder' nbButton outline class="codeSubmitBtn" mat-dialog-close size="small" status="info">بعدا ثبت
                 میکنم</button>
             </div>
           </form>

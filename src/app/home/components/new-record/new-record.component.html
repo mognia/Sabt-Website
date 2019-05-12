@@ -41,7 +41,7 @@
                 <nb-card>
                   <nb-card-body>
                     <!-- Review info component -->
-                    <review-info>
+                    <review-info (haveEmail)='mailStatus()'>
                     </review-info>
                     <!--  -->
                   </nb-card-body>
@@ -49,7 +49,7 @@
                 <button class="fontFamily" nbButton nbStepperPrevious>
                   قبلی
                 </button>
-                <button class="fontFamily" nbButton status="success">
+                <button class="fontFamily" (click)='submitRecord()' nbButton status="success">
                   ثبت رکورد
                 </button>
               </nb-step>

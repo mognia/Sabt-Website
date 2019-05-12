@@ -4,7 +4,7 @@ import { HomeComponent } from './home.component';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
-import { HeaderComponent } from "./components/header/header.component";
+import { HeaderComponent } from './components/header/header.component';
 
 import {
   NbActionsModule,
@@ -116,7 +116,7 @@ const HOME_COMPONENTS = [
     MatDialogModule,
     ThemeModule,
     NbTabsetModule,
-     ...NB_MODULES
+     ...NB_MODULES,
   ],
   declarations: [
     ...HOME_COMPONENTS,
@@ -128,10 +128,11 @@ const HOME_COMPONENTS = [
     LoginMailinputComponent,
     NewClaimComponent,
   ],
-  entryComponents:[
+  entryComponents: [
     LoginComponent,
-    HeaderComponent
-  ]
+    HeaderComponent,
+    LoginMailinputComponent,
+  ],
 })
 export class HomeModule {
 

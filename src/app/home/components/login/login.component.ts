@@ -34,13 +34,13 @@ export class LoginComponent implements OnInit {
     this.codeSent = true;
 
   }
-  submitCode(){
+  submitCode() {
     this.codeSubmited = true;
-   let logedUser = localStorage.getItem('user');
-   //logedUser = JSON.parse(logedUser);
+   const logedUser = localStorage.getItem('user');
+   // logedUser = JSON.parse(logedUser);
     if (JSON.parse(logedUser).email == null) {
       this.hasEmail = false;
-      
+
     } else {
       this.authService.closeDialog.next(true);
     }
