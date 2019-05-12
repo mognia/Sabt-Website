@@ -51,7 +51,6 @@ export class NewRecordComponent implements OnInit {
           haveEmail: this.haveEmail,
         },
         });
-      this.fileInputService.openMailInputFromRecorder.next('fromRecorder');
     } else {
       // TODO: send data to service
     }
