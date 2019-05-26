@@ -23,5 +23,8 @@ export class LoginMailinputComponent implements OnInit {
     }
 
   }
+  submiteCode(){
+    
+  }
 
 }

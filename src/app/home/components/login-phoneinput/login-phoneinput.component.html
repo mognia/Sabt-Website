@@ -12,7 +12,7 @@
         <div class="col phoneSection">
 
           <form #phoneNumForm="ngForm" [formGroup]="phoneForm"  (ngSubmit)="validateNum(phoneNumForm.value)">
-            <ngx-intl-tel-input class="phoneNum mx-auto" [cssClass]="phoneInput" [onlyCountries]="['ir', 'us','uk']"
+            <ngx-intl-tel-input class="phoneNum mx-auto"  [onlyCountries]="['ir', 'us','uk']"
               [enablePlaceholder]="true" [enableAutoCountrySelect]="true" name="phone" formControlName="phone">
             </ngx-intl-tel-input>
             <div *ngIf="invalidNum">
