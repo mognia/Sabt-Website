@@ -4,8 +4,8 @@
         <nb-stepper orientation="horizontal">
           <nb-step [label]="labelOne" [stepControl]="claimInputForm">
             <ng-template #labelOne>ثبت محتوا</ng-template>
-            <form [formGroup]="claimInputForm">
-              <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
+            <form [formGroup]="">
+              <input type="text" style="display:none" class="form-control" />
             </form>
 
             <file-uploader (fileInputChange)="
