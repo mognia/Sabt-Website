@@ -14,7 +14,7 @@ export class NewRecordComponent implements OnInit {
   hasFile = false;
   isValid;
   _subscription;
-  linearMode = true;
+  disableStepNavigation = true;
   fileInputForm: FormGroup;
   haveEmail;
 
@@ -30,7 +30,7 @@ export class NewRecordComponent implements OnInit {
       fileCtrl: ['', stepValidator], //
     });
 
-    this._subscription = fileInputService.fileChange.subscribe(value => {
+     this.fileInputService.fileChange.subscribe(value => {  
       this.hasFile = value;
       this.isValid = value;
     });
@@ -38,6 +38,14 @@ export class NewRecordComponent implements OnInit {
 
   }
   ngOnInit() { }
+  sendToValidation(e) {
+    console.log(e);
+    
+    let file = null;
+    file = e.target.files[0];
+
+    this.fileInputService.validate(file);
+  }
   mailStatus() {
     this.haveEmail = false;
   }

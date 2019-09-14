@@ -14,20 +14,17 @@ import { FileInputService } from './../../../services/file-input.service';
 })
 export class UploaderComponent implements OnInit {
   public uploaderForm: FormGroup;
+  @Output() fileInputChange = new EventEmitter<any>();
   constructor(
     private fileInputService: FileInputService,
-    public fb: FormBuilder,
+
   ) {
-    this.uploaderForm = fb.group({
-      file: [''],
-    });
+
   }
 
   ngOnInit() {}
-  @Output() fileInputChange = new EventEmitter<any>();
-  sendToValidation(e) {
-    const file = e.target.files[0];
 
-    this.fileInputService.validate(file);
+  removeFile(){
+    this.fileInputService.removeFile();
   }
 }

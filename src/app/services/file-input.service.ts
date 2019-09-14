@@ -5,7 +5,6 @@ import { Subject } from 'rxjs';
   providedIn: 'root',
 })
 export class FileInputService {
-  hasFile = false;
   fileChange: Subject<any> = new Subject<any>();
   inptFile;
   userInfo= {};
@@ -23,9 +22,11 @@ export class FileInputService {
     this.userInfoChange.emit(this.userInfo);
     // if every thing is ok we say we have a file here
     if (isValid) {
-      this.hasFile = true;
-      this.fileChange.next(this.hasFile);
+      this.fileChange.next(true);
     }
+  }
+  removeFile(){
+    this.fileChange.next(false);
   }
   getOptionalInfo(userInfo) {
     this.userInfo = userInfo;

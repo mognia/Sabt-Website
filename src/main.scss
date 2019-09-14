@@ -1,0 +1,166 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+  }
+  
+  .flex-col {
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+  }
+  
+  .jus-start {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .jus-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .jus-end {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .jus-between {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .jus-around {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .al-center {
+    display: flex;
+    align-items: center;
+  }
+  
+  .al-start {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .al-end {
+    display: flex;
+    align-items: flex-end;
+  }
+  
+  .wrapped {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  //---- width classes -----
+  
+  .wi-100 {
+    width: 100%;
+    min-width: 100%;
+  }
+  
+  .wi-90 {
+    width: 90%;
+    min-width: 90%;
+  }
+  
+  .wi-80 {
+    width: 80%;
+    min-width: 80%;
+  }
+  
+  .wi-70 {
+    width: 70%;
+    min-width: 70%;
+  }
+  
+  .wi-75 {
+    width: 75%;
+    min-width: 75%;
+  }
+  
+  .wi-60 {
+    width: 60%;
+    min-width: 60%;
+  }
+  
+  .wi-50 {
+    width: 50%;
+    min-width: 50%;
+  }
+  
+  .wi-40 {
+    width: 40%;
+    min-width: 40%;
+  }
+  
+  .wi-30 {
+    width: 30%;
+    min-width: 30%;
+  }
+  
+  .wi-20 {
+    width: 20%;
+    min-width: 20%;
+  }
+  
+  .wi-15 {
+    width: 15%;
+    min-width: 15%;
+  }
+  
+  .wi-10 {
+    width: 10%;
+    min-width: 10%;
+  }
+  
+  .display-invisible {
+    display: none;
+  }
+
+  //--------Grid system variables -------
+
+@mixin fourK {
+    @media screen and (min-width: 1690px) {
+      @content;
+    }
+  }
+  
+  @mixin laptop-l {
+    @media screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+  
+  @mixin laptop {
+    @media screen and (max-width: 1224px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 1024px) and (min-width: 768px) {
+      @content;
+    }
+  }
+  
+  // @mixin tablet-m {
+  //   @media screen and (max-width: 835px) {
+  //     @content;
+  //   }
+  // }
+  
+  @mixin mobile-l {
+    @media screen and (max-width: 767px) and (min-width: 320px) {
+      @content;
+    }
+  }
+  

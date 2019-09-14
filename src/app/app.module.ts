@@ -14,8 +14,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NbThemeModule, NbLayoutDirection } from '@nebular/theme';
+import { NbThemeModule, NbLayoutDirection, NbLayoutModule } from '@nebular/theme';
 import {MatDialogModule} from '@angular/material/dialog';
+import { PipeModule } from './pipes/pipe.module';
+
 
 
 @NgModule({
@@ -30,6 +32,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
+    PipeModule.forRoot(),
+    NbLayoutModule
   ],
   bootstrap: [AppComponent],
   providers: [

@@ -4,14 +4,10 @@
       <nb-tab id="tabTitle" style="font-family: iranSansM" tabTitle="ثبت جدید">
         <nb-card>
           <nb-card-body class="cardBody">
-            <nb-stepper orientation="horizontal">
-              <nb-step [label]="labelOne" [stepControl]="fileInputForm">
+            <nb-stepper  orientation="horizontal" >
+              <nb-step [label]="labelOne" >
                 <ng-template #labelOne>ثبت محتوا</ng-template>
-                <form [formGroup]="fileInputForm">
-                  <input type="text" style="display:none" class="form-control" formControlName="fileCtrl" />
-                </form>
-
-                <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; "></file-uploader>
+                <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; sendToValidation($event)"></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
