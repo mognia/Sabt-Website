@@ -5,8 +5,11 @@
         <nb-card>
           <nb-card-body class="cardBody">
             <nb-stepper  orientation="horizontal" >
-              <nb-step [label]="labelOne" >
+              <nb-step [label]="labelOne" [stepControl]="fileInputForm">
                 <ng-template #labelOne>ثبت محتوا</ng-template>
+                <form [formGroup]="fileInputForm">
+                  <input type="text" formControlName="fileCtrl" style="display:none" class="form-control" />
+                </form>
                 <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; sendToValidation($event)"></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی

@@ -2,13 +2,13 @@
     <nb-card>
       <nb-card-body class="cardBody">
         <nb-stepper orientation="horizontal" disableStepNavigation>
-          <nb-step [label]="labelOne">
+          <nb-step [label]="labelOne" [stepControl]="fileInputForm">
             <ng-template #labelOne>ثبت محتوا</ng-template>
-            <form [formGroup]="">
+            <form [formGroup]="fileInputForm">
               <input type="text" style="display:none" class="form-control" />
             </form>
 
-            <file-uploader (fileInputChange)="onfileChange($event)"></file-uploader>
+            <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; onfileChange($event)"></file-uploader>
 
             <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
               بعدی
