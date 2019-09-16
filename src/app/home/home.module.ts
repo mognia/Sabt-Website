@@ -10,34 +10,33 @@ import {
   NbActionsModule,
   NbCardModule,
   NbLayoutModule,
-  NbMenuModule,
-  NbRouteTabsetModule,
+  NbTreeGridModule,
+  
   NbSearchModule,
   NbSidebarModule,
   NbTabsetModule,
   NbUserModule,
   NbCheckboxModule,
   NbPopoverModule,
-  NbContextMenuModule,
-  NbProgressBarModule,
-  NbCalendarModule,
-  NbCalendarRangeModule,
+  
+  
+  
+  
   NbStepperModule,
   NbButtonModule,
   NbInputModule,
   NbAccordionModule,
-  NbDatepickerModule,
+  
   NbDialogModule,
   NbWindowModule,
   NbListModule,
-  NbToastrModule,
-  NbAlertModule,
+
   NbSpinnerModule,
   NbRadioModule,
   NbSelectModule,
-  NbChatModule,
+  
   NbTooltipModule,
-  NbCalendarKitModule,
+
 } from '@nebular/theme';
 import { UploaderComponent } from './components/uploader/uploader.component';
 import { NewRecordComponent } from './components/new-record/new-record.component';
@@ -65,34 +64,25 @@ const NB_MODULES = [
   NbCardModule,
   NbLayoutModule,
   NbTabsetModule,
-  NbRouteTabsetModule,
-  NbMenuModule,
   NbUserModule,
   NbActionsModule,
   NbSearchModule,
   NbSidebarModule,
   NbCheckboxModule,
   NbPopoverModule,
-  NbContextMenuModule,
-  NbProgressBarModule,
-  NbCalendarModule,
-  NbCalendarRangeModule,
   NbStepperModule,
   NbButtonModule,
   NbListModule,
-  NbToastrModule,
   NbInputModule,
   NbAccordionModule,
-  NbDatepickerModule,
   NbDialogModule,
   NbWindowModule,
-  NbAlertModule,
   NbSpinnerModule,
   NbRadioModule,
   NbSelectModule,
-  NbChatModule,
+  NbTreeGridModule,
   NbTooltipModule,
-  NbCalendarKitModule,
+
 ];
 
 const HOME_COMPONENTS = [
