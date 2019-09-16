@@ -39,8 +39,7 @@ export class NewRecordComponent implements OnInit {
   }
   ngOnInit() { }
   sendToValidation(e) {
-    console.log(e);
-    
+    this.fileInputForm.controls['fileCtrl'].setValue(e.target.files.length);
     let file = null;
     file = e.target.files[0];
 

@@ -8,7 +8,7 @@
               <input type="text" style="display:none" class="form-control" />
             </form>
 
-            <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; onfileChange($event)"></file-uploader>
+            <file-uploader (fileInputChange)="onfileChange($event)"></file-uploader>
 
             <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
               بعدی

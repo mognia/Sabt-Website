@@ -30,7 +30,7 @@ export class NewClaimComponent implements OnInit {
   }
   
   onfileChange(e){
-    
+    this.fileInputForm.controls['fileCtrl'].setValue(e.target.files.length);
     this.sharedService.sendFileData(e)
     
   }

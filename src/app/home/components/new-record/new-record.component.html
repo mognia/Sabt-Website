@@ -10,7 +10,7 @@
                 <form [formGroup]="fileInputForm">
                   <input type="text" formControlName="fileCtrl" style="display:none" class="form-control" />
                 </form>
-                <file-uploader (fileInputChange)="fileInputForm.setValue({ fileCtrl: $event?.files?.length }) ; sendToValidation($event)"></file-uploader>
+                <file-uploader (fileInputChange)="sendToValidation($event)"></file-uploader>
                 <button class="fontFamily" nbButton disabled nbStepperNext>
                   قبلی
                 </button>
