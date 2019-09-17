@@ -23,7 +23,7 @@ export class CalimResultComponent implements OnInit {
       let inputFile = data.target.files[0];
       this.fileName = inputFile.name;
       this.fileFormat = inputFile.type;
-      this.fileSize = inputFile.size  / 1024 / 1024;
+      this.fileSize = inputFile.size  / 1024;
       this.lastModify = new Date(inputFile.lastModified).toISOString(); 
     })
 

@@ -22,17 +22,17 @@ export class NewClaimComponent implements OnInit {
    }
 
   ngOnInit() {
-    this.hasFile = false;
     this.fileInputService.fileChange.subscribe(value => {
       this.hasFile = value;
       this.isValid = value;
     });
+    
   }
   
   onfileChange(e){
     this.fileInputForm.controls['fileCtrl'].setValue(e.target.files.length);
     this.sharedService.sendFileData(e)
-    
+    this.hasFile = true;
   }
 
 }

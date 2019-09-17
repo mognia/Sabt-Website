@@ -1,175 +1,174 @@
-.section{
-    
-  }
-  
-  /* ==========================================================================
+.section {
+}
+
+/* ==========================================================================
       App Features Section Style
      ========================================================================== */
-  #app-features {
-    background: #f6fbfd;
-    font-family: iranSansM;
-  }
-  
-  #app-features .content-left {
-    position: relative;
-  }
-  
-  #app-features .content-left span {
-    float: right;
-    margin-left: 25px;
-  }
-  
-  #app-features .content-right {
-    position: relative;
-  }
-  
-  #app-features .content-right span {
-    float: left;
-    margin-right: 25px;
-  }
-  
-  #app-features .box-item {
-    margin: 30px 0;
-  }
-  
-  
-  #app-features .box-item .icon {
-    text-align: center;
-    margin: 0 15px;
-    display: inline-block;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    text-align: center;
-    position: relative;
+#app-features {
+  background: #f6fbfd;
+  font-family: iranSansM;
+}
 
-    background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+#app-features .content-left {
+  position: relative;
+}
 
-    z-index: 1;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-  }
-  
-  #app-features .box-item .icon i {
-    color: #fff;
-    font-size: 24px;
-    line-height: 60px;
-    -webkit-transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
-    transition: all 0.2s linear;
-  }
-  
-  #app-features .box-item .text h4 {
-    font-weight: 500;
-    font-size: 22px;
-    margin-bottom: 15px;
-    line-height: 22px;
-    font-family: iranSansM;
-  }
-  
-  #app-features .box-item .text p {
-    font-size: 14px;
-    line-height: 26px;
-  }
-  
-  #app-features .content-left .text {
-    margin-right: 90px;
-  }
-  
-  #app-features .content-right .text {
-    margin-left: 90px;
-  }
-  
-  #app-features .show-box {
-    text-align: center;
-    margin: 15px 0;
-  }
-  
-  #app-features .show-box img {
-    width: 100%;
-  }
+#app-features .content-left span {
+  float: right;
+  margin-left: 25px;
+}
 
-  
+#app-features .content-right {
+  position: relative;
+}
+
+#app-features .content-right span {
+  float: left;
+  margin-right: 25px;
+}
+
+#app-features .box-item {
+  margin: 30px 0;
+}
+
+#app-features .box-item .icon {
+  text-align: center;
+  margin: 0 15px;
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  text-align: center;
+  position: relative;
+
+  background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+
+  z-index: 1;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app-features .box-item .icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 60px;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+#app-features .box-item .text h4 {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 15px;
+  line-height: 22px;
+  font-family: iranSansM;
+}
+
+#app-features .box-item .text p {
+  font-size: 14px;
+  line-height: 26px;
+}
+
+#app-features .content-left .text {
+  margin-right: 90px;
+}
+
+#app-features .content-right .text {
+  margin-left: 90px;
+}
+
+#app-features .show-box {
+  text-align: center;
+  margin: 15px 0;
+}
+
+#app-features .show-box img {
+  width: 100%;
+}
+
 /* ==========================================================================
    Section Title
    ========================================================================== */
 .section {
-    padding: 80px 0 57px;
-  }
-  
-  .section-header {
-    color: #fff;
-    margin-bottom: 50px;
-    text-align: center;
-    position: relative;
-  }
-  
-  .section-header .section-title {
-    font-size: 30px;
-    margin-bottom: 20px;
-    font-family: iranSansM, sans-serif;
-    font-weight: 600;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
-    background-color: #2dfbff;
-    background-image: -webkit-linear-gradient(bottom right, #3c96ff, #2dfbff);
-    background-image: -o-linear-gradient(bottom right, #3c96ff, #2dfbff);
-    background-image: linear-gradient(to top left, #3c96ff, #2dfbff);
-    position: relative;
-  }
+  padding: 80px 0 57px;
+}
 
-  /* ==========================================================================
+.section-header {
+  color: #fff;
+  margin-bottom: 50px;
+  text-align: center;
+  position: relative;
+}
+
+.section-header .section-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: iranSansM, sans-serif;
+  font-weight: 600;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  background-color: #2dfbff;
+  background-image: -webkit-linear-gradient(bottom right, #3c96ff, #2dfbff);
+  background-image: -o-linear-gradient(bottom right, #3c96ff, #2dfbff);
+  background-image: linear-gradient(to top left, #3c96ff, #2dfbff);
+  position: relative;
+}
+
+/* ==========================================================================
    Video promo Style
    ========================================================================== */
 .video-promo {
-
-    background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
-
-  }
-  
-  .video-promo .video-promo-content {
-    color: #fff;
-    margin-bottom: 15px;
-  }
-  
-  .video-promo .video-promo-content .video-popup {
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    line-height: 80px;
-    text-align: center;
-    border: 3px solid #fff;
-    color: #3c9cfd;
-    border-radius: 50%;
-    display: inline-block;
-    font-size: 26px;
-  }
-  
-  .video-promo .video-promo-content .video-popup:hover {
-    box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
-  }
-  
-  .video-promo .video-promo-content h2 {
-    color: #fff;
-    font-size: 30px;
-    text-transform: uppercase;
-  }
-  
-  .video-promo .video-promo-content p {
-    color: #fff;
-  }
-  
-  .title {
-    text-align: center;
-    margin-bottom: 2rem;
-    margin-top: 1rem;
+  background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
 }
-.tabel-head,.tabel-row{
+
+.video-promo .video-promo-content {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.video-promo .video-promo-content .video-popup {
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  line-height: 80px;
+  text-align: center;
+  border: 3px solid #fff;
+  color: #3c9cfd;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 26px;
+}
+
+.video-promo .video-promo-content .video-popup:hover {
+  box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+}
+
+.video-promo .video-promo-content h2 {
+  color: #fff;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.video-promo .video-promo-content p {
+  color: #fff;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+.tabel-head,
+.tabel-row {
   text-align: center;
 }
-.tabel-row:nth-child(even) {background-color: #3c9cfd12;}
+.tabel-row:hover {
+  background-color: #3c9cfd69;
+  cursor: pointer;
+}
