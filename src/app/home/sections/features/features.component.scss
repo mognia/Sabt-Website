@@ -166,5 +166,10 @@
   
   .title {
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
 }
+.tabel-head,.tabel-row{
+  text-align: center;
+}
+.tabel-row:nth-child(even) {background-color: #3c9cfd12;}
