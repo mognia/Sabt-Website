@@ -8,8 +8,8 @@ import { NbGetters, NbTreeGridDataSource, NbTreeGridDataSourceBuilder } from '@n
   styleUrls: ['./features.component.scss']
 })
 export class FeaturesComponent implements OnInit {
-  customColumn = 'name';
-  defaultColumns = [ 'size', 'kind', 'items' ];
+  customColumn = 'نام فایل';
+  defaultColumns = [ 'آی دی تراکنش', 'نوع فایل', 'زمان ثبت' ];
   allColumns = [ this.customColumn, ...this.defaultColumns ];
   source: NbTreeGridDataSource<any>;
   constructor() { }
