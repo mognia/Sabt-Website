@@ -1,0 +1,34 @@
+
+    <nb-card>
+      <nb-card-body class="cardBody">
+        <nb-stepper orientation="horizontal" disableStepNavigation>
+          <nb-step [label]="labelOne" [stepControl]="fileInputForm">
+            <ng-template #labelOne>ثبت محتوا</ng-template>
+            <form [formGroup]="fileInputForm">
+              <input type="text" style="display:none" class="form-control" />
+            </form>
+
+            <file-uploader (fileInputChange)="onfileChange($event)"></file-uploader>
+
+            <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
+              بعدی
+            </button>
+            <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
+              بعدی
+            </button>
+          </nb-step>
+          <nb-step [label]="labelOne1">
+            <ng-template #labelOne1>نتیجه</ng-template>
+            <form >
+              <input type="text" style="display:none" class="form-control" />
+            </form>
+
+            <calim-result ></calim-result>
+            <button class="fontFamily" nbButton nbStepperPrevious>
+              قبلی
+            </button>
+
+          </nb-step>
+        </nb-stepper>
+      </nb-card-body>
+    </nb-card>

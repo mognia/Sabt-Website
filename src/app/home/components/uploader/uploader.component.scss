@@ -1,0 +1,124 @@
+  /* uploader */
+   
+   
+  .file-upload {
+    background-color: #d0d0d05e;
+    width: 82%;
+    padding: 27px;
+    margin: 0% 10% 31px 0;
+    border-radius: 31px;
+}
+  
+  .file-upload-btn {
+    width: 73%;
+    margin: 0 12%;
+    color: #fff;
+    background: #3b9dff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #31dfff;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .file-upload-btn:hover {
+    background: #2df7ff;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .file-upload-btn:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+  
+  .file-upload-content {
+    display: none;
+    text-align: center;
+  }
+  
+  .file-upload-input {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    cursor: pointer;
+    left: 0%;
+  }
+  
+  .image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #37b2ff;
+    position: relative;
+  }
+  
+  .image-dropping,
+  .image-upload-wrap:hover {
+    background-color: #2ef9ff;
+    border: 4px dashed #ffffff;
+  }
+  
+  .image-title{
+    font-size: 12px;
+    font-family: none;
+  }
+  .image-title-wrap {
+    padding: 0 15px 15px 15px;
+    color: #222;
+  }
+  
+  .drag-text {
+    text-align: center;
+  }
+  
+  .drag-text h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    color: #3b97ff;
+    padding: 60px 0;
+  }
+  
+  .file-upload-image {
+    max-height: 200px;
+    max-width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .remove-image {
+    width: 200px;
+    margin: 0;
+    color: #fff;
+    background: #cd4535;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    border-bottom: 4px solid #b02818;
+    transition: all .2s ease;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .remove-image:hover {
+    background: #c13b2a;
+    color: #ffffff;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+  
+  .remove-image:active {
+    border: 0;
+    transition: all .2s ease;
+  }
+.drag-text h3{
+  font-family: iranSansM;
+  font-size: 22px;
+}

@@ -1,0 +1,86 @@
+
+/* ==========================================================================
+   Footer Style
+   ========================================================================== */
+   .block-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  footer .footer-Content {
+    background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+    padding: 60px 0 0px;
+    color: #546E7A;
+    text-align: right;
+  }
+  
+  footer .footer-Content h2 {
+    color: #ffffff;
+    font-size: 30px;
+  }
+  
+  .textwidget {
+    line-height: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .textwidget p {
+    font-size: 14px;
+    color: #ffffff;
+  }
+  
+  footer .menu {
+    padding-left: 0;
+  }
+  
+  footer .menu li {
+    padding-bottom: 12px;
+  }
+  
+  footer .menu li a {
+    color: #ffffff;
+    font-size: 14px;
+  }
+  
+  footer .menu li a:hover {
+    color: #f1f1f1;
+  }
+  
+  .footer-social {
+    margin-top: 4px;
+  }
+  
+  .footer-social li {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .footer-social li a {
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .footer-social li .facebook:hover {
+    color: #3b5998;
+  }
+  
+  .footer-social li .twitter:hover {
+    color: #55acee;
+  }
+  
+  .footer-social li .linkedin:hover {
+    color: #007bb5;
+  }
+  
+  .footer-social li .google-plus:hover {
+    color: #dd4b39;
+  }
+  

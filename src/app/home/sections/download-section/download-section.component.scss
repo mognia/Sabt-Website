@@ -1,0 +1,217 @@
+/* ==========================================================================
+    download
+   ========================================================================== */
+   #download {
+    background: #f6fbfd;
+    padding: 112px 0 79px;
+    font-family: iranSansM;
+}
+
+#download .download-wrapper {
+    padding: 0px 30px;
+    text-align: right;
+  }
+  
+  #download .download-wrapper .download-text h4 {
+    font-size: 36px;
+  }
+  
+  #download .btn {
+    margin: 20px 20px 0px 0px;
+    text-align: left;
+    font-size: 16px;
+    font-family:  iranSans;
+  }
+  
+  
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+.btn {
+    font-size: 14px;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-family:  iranSans;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    display: inline-block;
+  }
+  
+  .btn:focus,
+  .btn:active {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .btn-common {
+    font-family: iranSansM;
+    background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+
+    position: relative;
+    z-index: 1;
+  }
+  
+  .btn-common:hover {
+    color: #fff;
+    box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  }
+  
+  .btn-effect {
+    overflow: hidden;
+  }
+  
+  .btn-effect:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-effect:hover:after {
+    width: 100%;
+  }
+  
+  .btn-border {
+    border-style: solid;
+    border-width: 2px;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: #3c9cfd;
+    color: #3c9cfd;
+  }
+  
+  .btn-border:hover {
+    box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  }
+  
+  .btn-border-filled {
+    cursor: pointer;
+    background-color: #fff;
+    border: 2px solid #fff;
+    color: #3c9cfd;
+  }
+  
+  .btn-border-filled:hover {
+    color: #3c9cfd;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
+  }
+  
+  .btn-lg {
+    padding: 14px 33px;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  
+  .btn-rm {
+    color: #3c9cfd;
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+  
+  .btn-rm i {
+    vertical-align: middle;
+  }
+  
+  .btn-trial {
+    background: #fff;
+    color: #191c1e;
+    padding: 5px 20px;
+    margin-left: 30px;
+  }
+  
+  .btn-trial:hover,
+  .btn-trial:active,
+  .btn-trial:focus {
+    color: #3c9cfd;
+  }
+  
+  .btn-apple {
+    border-width: 2px;
+    border-color: #3c96ff;
+    border-style: solid;
+    background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+  }
+  
+  .btn-apple i {
+    background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .btn-apple:hover,
+  .btn-apple:active,
+  .btn-apple:focus {
+    background: linear-gradient(to right, #3c96ff 0%, #2dfbff 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+  
+  button:focus {
+    outline: none !important;
+  }
+  
+  .btn-border-fill {
+    background: #fff;
+    border-color: #fff;
+    color: #3c9cfd;
+  }
+  
+  .btn-subtitle {
+    color: #191c1e;
+    font-family: iranSans, sans-serif;
+    background: #dbecff;
+    text-align: center;
+    border-radius: 30px;
+    padding: 6px 30px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 20px;
+    font-size: 14px;
+  }
+  
+  .clear {
+    clear: both;
+  }
+  
+  .mt {
+    margin-top: 80px;
+  }
+  
+  .mt-30 {
+    margin-top: 30px;
+  }
+  
+  .mb-30 {
+    margin-bottom: 30px;
+  }
+  
+  .mb-50 {
+    margin-bottom: 50px;
+  }
+  
+  .padding-0 {
+    padding: 0;
+  }
+  

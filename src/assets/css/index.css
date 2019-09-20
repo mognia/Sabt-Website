@@ -1,0 +1,15 @@
+
+@font-face {
+    font-family: iranSans;
+    src: url(./../fonts/IRANSans.woff2) format("opentype");
+  }
+  @font-face {
+    font-family: iranSansM;
+    src: url(./../fonts/iransansMedium.woff2) format("opentype");
+  }
+
+  .cdk-global-scrollblock {
+    position: initial;
+    width: initial;
+    overflow: hidden;
+  }

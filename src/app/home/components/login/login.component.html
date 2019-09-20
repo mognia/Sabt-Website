@@ -1,0 +1,20 @@
+<div class="loginBody " *ngIf="!codeSent">
+  <div class="header">
+    <button mat-dialog-close type="button" class="btn btn-danger closeBtn">
+
+      <i class="fas fa-times"></i>
+    </button>
+    <p mat-dialog-title>ورود / عضویت</p>
+  </div>
+  <!-- Phone input Step is in this component -->
+ <login-phoneinput (codeSent)='sendCode()'></login-phoneinput>
+
+</div>
+<div class="sentCodeStep" *ngIf="codeSent && !codeSubmited">
+  <!-- Sent code to phone input component -->
+  <login-codeinput (codeConfirmed)='submitCode()'></login-codeinput>
+</div>
+<div class="sentCodeStep" *ngIf="!hasEmail">
+  <!-- adding email after loged in component -->
+  <login-mailInput></login-mailInput>
+</div>

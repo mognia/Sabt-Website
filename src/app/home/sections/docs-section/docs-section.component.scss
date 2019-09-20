@@ -1,0 +1,56 @@
+#features-two{
+    font-family: iranSansM;
+    text-align: right;
+}
+  
+  /* ==========================================================================
+    features-two
+     ========================================================================== */
+  #features-two .img-thumb {
+    margin-bottom: 15px;
+  }
+  
+.text-wrapper {
+    height: 100%;
+    width: 100%;
+    display: table;
+    text-align: right;
+  }
+  
+  .text-wrapper > div {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  
+  .text-wrapper h3 {
+    font-family: iranSansM;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .text-wrapper .btn-rm {
+    margin-top: 15px;
+  }
+  
+
+p {
+    font-size: 14px;
+    color: #a0a6ad;
+    line-height: 26px;
+    font-family: iranSansM;
+    margin-bottom: 0;
+}
+
+
+.btn-rm {
+    color: #3c9cfd;
+    padding: 10px 0;
+    text-transform: capitalize;
+    font-size: 16px;
+  }
+  
+  .btn-rm i {
+    vertical-align: middle;
+  }
+  

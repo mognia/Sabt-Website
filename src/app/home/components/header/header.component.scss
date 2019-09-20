@@ -1,0 +1,170 @@
+ 
+
+
+      /* ==========================================================================
+         Hero Area
+         ========================================================================== */
+      .hero-area {
+        background: #3c96ff;
+        background-size: cover;
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .hero-area .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image: -moz-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%);
+        background-image: -webkit-linear-gradient(0deg, #2dfbff 0%, #3c96ff 100%);
+        background-image: -ms-linear-gradient(0deg, #3c96ff 0%, #2dfbff 100%);
+      }
+      
+      .hero-area .contents {
+        padding: 160px 0 140px;
+      }
+      
+      .hero-area .contents h2 {
+        color: #fff;
+        font-size: 42px;
+        font-weight: 600;
+        line-height: 60px;
+        margin-bottom: 8px;
+      }
+      
+      .hero-area .contents p {
+        color: #fff;
+        font-size: 14px;
+        line-height: 26px;
+      }
+      
+      .hero-area .contents .btn {
+        margin-top: 40px;
+        margin-right: 20px;
+        text-transform: uppercase;
+      }
+      
+      .hero-area .contents .btn-border {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+      
+      .hero-area .intro-img {
+        padding: 148px 0 0px;
+      }
+      
+      .hero-area .intro-img img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      .headerTxt{
+        text-align: right;
+        font-size: 33px;
+        margin: -10px 14% 2% 0;
+      }
+      .headerTxt p{
+        display: inline-block;
+        color: #fff;
+        font-family: iranSansM;
+        font-size: 23px;
+      }
+      .headerTxt .fa{
+        color: #3bffc0d6;
+        margin-left: 12px;
+      }
+      
+     .hero-area .header-container{
+        padding: 2% 0 0 0;
+      }
+      .header-SubTitle{
+        font-family: iranSansM;
+        color: #fff;
+        padding: 0% 0% 2% 0%;
+        font-size: 16px;
+      }
+      /* ==========================================================================
+       Hero Production version
+       ========================================================================== */
+      .hero-area-2 {
+        color: #fff;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .container-bg{
+        position: absolute;
+        width: 172%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        background-image: url("./../../../../assets/img/intro-mobile.png");
+        background-size: 8%;
+        opacity: 0.3;
+      }
+      
+      .hero-area-2 .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+
+        background-image: -webkit-linear-gradient(0deg, #2d81ff 0%, #3c96ff 100%);
+
+      }
+      
+      .hero-area-2 .contents {
+        padding: 50px 0 5px 0;
+        text-align: right;
+      }
+      
+      .hero-area-2 .contents h2 {
+        font-family: iranSansM;
+        color: #efefef;
+        font-size: 26px;
+        line-height: 62px;
+        margin-top: 14px;
+        font-weight: 600;
+      }
+      
+      .hero-area-2 .contents p {
+        color: #373bb1c7;
+        font-size: 25px;
+        line-height: 48px;
+      }
+      
+      .hero-area-2 .contents .btn {
+        margin-top: 40px;
+        margin-right: 20px;
+        text-transform: uppercase;
+      }
+      
+      .hero-area-2 .contents .btn-border {
+        border: 2px solid #fff;
+        color: #fff;
+      }
+      
+      .hero-area-2 .intro-img {
+        padding: 180px 0 0px;
+        max-height: 700px;
+      }
+      
+      .hero-area-2 .intro-img img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+      .btn{
+        font-family: iransansm;
+        margin: 0 5%;
+      }
+      .nav-item{
+        margin: 0 2%;
+      }
+    .hyperLinks{
+      padding-right: 31%!important;
+    }

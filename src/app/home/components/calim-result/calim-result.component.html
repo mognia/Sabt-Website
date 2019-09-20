@@ -1,0 +1,48 @@
+<div class="container">
+  <div class="row">
+      <div class="col-6 fileStatus">
+          <!-- file status -->
+          <ul class="statusUl">
+            <li class="statusLi">
+              <span>وضعیت ثبت :</span>
+              <p class="greenText">ثبت شده در سیستم</p>
+            </li>
+            <li class="statusLi">
+              <span>آی دی تراکنش :</span>
+              <p class="transactionID">edefeawd123aedewqdw</p>
+            </li>
+            <li class="statusLi">
+              <span>تاریخ ثبت :</span>
+              <p>98/6/30</p>
+            </li>
+            <li class="statusLi">
+              <span>نام صاحب اثر :</span>
+              <p>anonymous</p>
+            </li>
+          </ul>
+        </div>
+
+    <div class="col-6 fileData">
+      <!-- file data -->
+      <ul class="fileDataUl">
+        <li class="dataLi">
+          <span>نام فایل :</span>
+          <p>{{fileName}}</p>
+        </li>
+        <li class="dataLi">
+          <span>فرمت فایل :</span>
+          <p>{{fileFormat}}</p>
+        </li>
+        <li class="dataLi">
+          <span>حجم فایل :</span>
+          <p>{{fileSize}} MB</p>
+        </li>
+        <li class="dataLi">
+            <span>تاریخ آخرین تغییرات :</span>
+            <p>{{lastModify | utc2jalali}}</p>
+          </li>
+      </ul>
+    </div>
+
+  </div>
+  </div>

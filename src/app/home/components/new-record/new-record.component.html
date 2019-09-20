@@ -1,0 +1,66 @@
+<nb-card>
+  <nb-card-body>
+    <nb-tabset fullWidth>
+      <nb-tab id="tabTitle" style="font-family: iranSansM" tabTitle="ثبت جدید">
+        <nb-card>
+          <nb-card-body class="cardBody">
+            <nb-stepper disableStepNavigation orientation="horizontal" >
+              <nb-step [label]="labelOne" [stepControl]="fileInputForm">
+                <ng-template #labelOne>ثبت محتوا</ng-template>
+                <form [formGroup]="fileInputForm">
+                  <input type="text" formControlName="fileCtrl" style="display:none" class="form-control" />
+                </form>
+                <file-uploader (fileInputChange)="sendToValidation($event)"></file-uploader>
+                <button class="fontFamily" nbButton disabled nbStepperNext>
+                  قبلی
+                </button>
+                <button *ngIf="hasFile" class="fontFamily" nbButton nbStepperNext type="submit">
+                  بعدی
+                </button>
+                <button *ngIf="!hasFile" class="fontFamily" nbButton nbPopover="ابتدا یک فایل انتخاب کنید">
+                  بعدی
+                </button>
+              </nb-step>
+              <nb-step [label]="labelTwo">
+                <ng-template #labelTwo> اطلاعات تکمیلی</ng-template>
+                <nb-card>
+                  <nb-card-body>
+                    <!-- Oprtional info Component -->
+                    <optional-info optionalInputChange="getOptionalValue($event)">
+                    </optional-info>
+                    <!--  -->
+                  </nb-card-body>
+                </nb-card>
+                <button class="fontFamily" nbButton nbStepperPrevious>
+                  قبلی
+                </button>
+                <button class="fontFamily" nbButton nbStepperNext>بعدی</button>
+              </nb-step>
+              <nb-step label="تایید">
+                <nb-card>
+                  <nb-card-body>
+                    <!-- Review info component -->
+                    <review-info (haveEmail)='mailStatus()'>
+                    </review-info>
+                    <!--  -->
+                  </nb-card-body>
+                </nb-card>
+                <button class="fontFamily" nbButton nbStepperPrevious>
+                  قبلی
+                </button>
+                <button class="fontFamily" (click)='submitRecord()' nbButton status="success">
+                  ثبت رکورد
+                </button>
+              </nb-step>
+            </nb-stepper>
+          </nb-card-body>
+        </nb-card>
+      </nb-tab>
+      <nb-tab tabTitle="استعلام">
+        <!-- new claim Component -->
+        <new-claim></new-claim>
+        <!--  -->
+      </nb-tab>
+    </nb-tabset>
+  </nb-card-body>
+</nb-card>
